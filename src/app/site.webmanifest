@@ -1,0 +1,20 @@
+{
+  "name": "PDFX",
+  "short_name": "PDFX",
+  "start_url": "/chat",
+  "icons": [
+    {
+      "src": "/icons/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#2C746E",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
