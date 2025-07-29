@@ -199,8 +199,8 @@ export function MultipleChoiceQuiz({ questions, onClose, onNewQuiz, pdfName }: M
                 </div>
                 <p className="text-muted-foreground">Total Score</p>
               </div>
-              <div className="bg-green-500/10 rounded-xl p-6 text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">
+              <div className="bg-blue-500/10 rounded-xl p-6 text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">
                   {correctAnswers}
                 </div>
                 <p className="text-muted-foreground">Correct Answers</p>
@@ -220,7 +220,7 @@ export function MultipleChoiceQuiz({ questions, onClose, onNewQuiz, pdfName }: M
                   key={q.id}
                   className={`rounded-lg border p-6 ${
                     q.userAnswer === q.correctAnswer 
-                      ? 'bg-green-500/5 border-green-500/20' 
+                      ? 'bg-blue-500/5 border-blue-500/20' 
                       : 'bg-red-500/5 border-red-500/20'
                   }`}
                 >
@@ -228,7 +228,7 @@ export function MultipleChoiceQuiz({ questions, onClose, onNewQuiz, pdfName }: M
                     <div className={`
                       w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0
                       ${q.userAnswer === q.correctAnswer 
-                        ? 'bg-green-500/20 text-green-600' 
+                        ? 'bg-blue-500/20 text-blue-600' 
                         : 'bg-red-500/20 text-red-600'
                       }
                     `}>
@@ -244,7 +244,7 @@ export function MultipleChoiceQuiz({ questions, onClose, onNewQuiz, pdfName }: M
                           <span className="text-sm font-medium">Your answer:</span>
                           <span className={`
                             ${q.userAnswer === q.correctAnswer 
-                              ? 'text-green-600' 
+                              ? 'text-blue-600' 
                               : 'text-red-600'
                             }
                           `}>
@@ -253,7 +253,7 @@ export function MultipleChoiceQuiz({ questions, onClose, onNewQuiz, pdfName }: M
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-sm font-medium">Correct answer:</span>
-                          <span className="text-green-600">
+                          <span className="text-blue-600">
                             <MathJax>{processLatexContent(q.correctAnswer)}</MathJax>
                           </span>
                         </div>
@@ -381,7 +381,7 @@ export function MultipleChoiceQuiz({ questions, onClose, onNewQuiz, pdfName }: M
                       w-full p-3 md:p-4 rounded-lg border text-left text-sm md:text-base transition-all
                       ${currentQuestion.isChecked
                         ? option === currentQuestion.correctAnswer
-                          ? 'border-green-500 bg-green-500/10 text-green-700'
+                          ? 'border-blue-500 bg-blue-500/10 text-blue-700'
                           : option === currentQuestion.userAnswer
                             ? 'border-red-500 bg-red-500/10 text-red-700'
                             : 'border-muted bg-background'
@@ -407,7 +407,7 @@ export function MultipleChoiceQuiz({ questions, onClose, onNewQuiz, pdfName }: M
                 >
                   <div className="flex items-start gap-3">
                     {currentQuestion.userAnswer === currentQuestion.correctAnswer ? (
-                      <Check className="w-5 h-5 text-green-500 mt-1" />
+                      <Check className="w-5 h-5 text-blue-500 mt-1" />
                     ) : (
                       <X className="w-5 h-5 text-red-500 mt-1" />
                     )}

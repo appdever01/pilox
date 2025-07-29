@@ -207,12 +207,12 @@ Join me on this AI-powered learning journey! Use my referral code "${referralCod
                     </p>
                   </div>
 
-                  <div className="p-6 bg-emerald-50/30 rounded-xl border border-emerald-100">
+                  <div className="p-6 bg-blue-50/30 rounded-xl border border-blue-100">
                     <div className="flex flex-col-reverse md:flex-row md:items-center justify-between mb-2">
                       <h3 className="text-xs md:text-base font-medium">
                         Credits Earned
                       </h3>
-                      <span className="text-3xl font-bold text-emerald-600">
+                      <span className="text-3xl font-bold text-blue-600">
                         {referralDetails?.total_credits || 0}
                       </span>
                     </div>
@@ -241,7 +241,7 @@ Join me on this AI-powered learning journey! Use my referral code "${referralCod
                     onClick={copyReferralLink}
                   >
                     {copied ? (
-                      <CheckCheck className="w-4 h-4 text-green-500" />
+                      <CheckCheck className="w-4 h-4 text-blue-500" />
                     ) : (
                       <Copy className="w-4 h-4" />
                     )}
@@ -263,7 +263,7 @@ Join me on this AI-powered learning journey! Use my referral code "${referralCod
                     onClick={copyReferralCode}
                   >
                     {codeCopied ? (
-                      <CheckCheck className="w-4 h-4 text-green-500" />
+                      <CheckCheck className="w-4 h-4 text-blue-500" />
                     ) : (
                       <Copy className="w-4 h-4" />
                     )}
@@ -286,7 +286,7 @@ Join me on this AI-powered learning journey! Use my referral code "${referralCod
                     onClick={copyReferralMessage}
                   >
                     {messageCopied ? (
-                      <CheckCheck className="w-4 h-4 text-green-500" />
+                      <CheckCheck className="w-4 h-4 text-blue-500" />
                     ) : (
                       <Copy className="w-4 h-4" />
                     )}
@@ -346,7 +346,7 @@ Join me on this AI-powered learning journey! Use my referral code "${referralCod
                             </span>
                           </td>
                           <td className="px-6 py-4">
-                            <span className="inline-flex whitespace-nowrap px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700">
+                            <span className="inline-flex whitespace-nowrap px-2.5 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-700">
                               {referral.referralCredit} credits
                             </span>
                           </td>

@@ -82,7 +82,7 @@ export function MoreQuestions({
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <MessageSquare className="w-5 h-5 text-emerald-600" />
+            <MessageSquare className="w-5 h-5 text-blue-600" />
             {lowQuestions
               ? "Oops, you ran out of questions"
               : "Get more questions"}
@@ -90,12 +90,12 @@ export function MoreQuestions({
         </DialogHeader>
 
         <div className="mt-4">
-          <div className="bg-emerald-50/80 rounded-2xl p-4 mb-6">
-            <div className="flex items-center gap-2 text-emerald-600">
+          <div className="bg-blue-50/80 rounded-2xl p-4 mb-6">
+            <div className="flex items-center gap-2 text-blue-600">
               <Info className="w-5 h-5" />
               <p className="text-sm">Your balance: {user?.credits} credits</p>
             </div>
-            <div className="flex items-center gap-2 text-emerald-600 mt-2">
+            <div className="flex items-center gap-2 text-blue-600 mt-2">
               <Info className="w-5 h-5" />
               <p className="text-sm">
                 1 credit = +{questionsPerCredit} questions
@@ -111,13 +111,13 @@ export function MoreQuestions({
               disabled={isLoading}
               value={credits > 0 ? credits : ""}
               onChange={(e) => setCredits(Number(e.target.value))}
-              className="w-full h-10 px-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-transparent"
+              className="w-full h-10 px-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               placeholder="Enter number of credits"
             />
           </div>
 
           <Button
-            className="mt-6 w-full bg-emerald-600 hover:bg-emerald-700 text-white h-12"
+            className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white h-12"
             disabled={
               credits <= 0 || isLoading || credits > (user?.credits || 0)
             }

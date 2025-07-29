@@ -48,7 +48,7 @@ export function Hero() {
     <section className="relative pt-24 md:pt-32">
       <div className="container mx-auto px-4 relative">
         <div className="text-center max-w-4xl mx-auto">
-          <p className="text-emerald-600/90 text-sm font-medium mb-1 flex items-center justify-center gap-1.5 bg-emerald-50/50 w-fit mx-auto px-3 py-1.5 rounded-full border border-emerald-100">
+          <p className="text-blue-600/90 text-sm font-medium mb-1 flex items-center justify-center gap-1.5 bg-blue-50/50 w-fit mx-auto px-3 py-1.5 rounded-full border border-blue-100">
             <Sparkles className="w-3.5 h-3.5" />
             AI-powered PDF magic ✨
           </p>
@@ -77,7 +77,7 @@ export function Hero() {
                 wrapper="h1"
                 speed={50}
                 repeat={Infinity}
-                className="text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.3] md:!leading-normal bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent max-w-[90vw] text-center"
+                className="text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.3] md:!leading-normal bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent max-w-[90vw] text-center"
               />
             </div>
           </div>
@@ -89,13 +89,13 @@ export function Hero() {
 
           <div className="flex flex-row items-center justify-center gap-2 mb-16">
             <div className="flex items-center gap-2 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200">
-              <Users2 className="w-4 h-4  text-emerald-600" />
+              <Users2 className="w-4 h-4  text-blue-600" />
               <span className="text-sm sm:text-sm text-gray-600">
                 10k+ users
               </span>
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200">
-              <Shield className="w-4 h-4  text-emerald-600" />
+              <Shield className="w-4 h-4  text-blue-600" />
               <span className="text-sm sm:text-sm text-gray-600">
                 Enterprise security
               </span>
@@ -111,8 +111,8 @@ export function Hero() {
                          }
                          ${
                            isDragActive
-                             ? "border-emerald-500 bg-emerald-50/50"
-                             : "border-gray-200 hover:border-emerald-500/50"
+                             ? "border-blue-500 bg-blue-50/50"
+                             : "border-gray-200 hover:border-blue-500/50"
                          }`}
             >
               <input
@@ -120,11 +120,11 @@ export function Hero() {
                 disabled={isProcessing}
               />
               <div className="flex flex-col items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
                   {isProcessing ? (
-                    <div className="w-8 h-8 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin" />
+                    <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
                   ) : (
-                    <Upload className="w-8 h-8 text-emerald-600" />
+                    <Upload className="w-8 h-8 text-blue-600" />
                   )}
                 </div>
                 <h3 className="text-xl font-semibold">
@@ -135,7 +135,7 @@ export function Hero() {
                       : "Click to upload, or drag PDF here"}
                 </h3>
                 {selectedFile && (
-                  <p className="text-sm text-emerald-600 font-medium">
+                  <p className="text-sm text-blue-600 font-medium">
                     Selected: {selectedFile.name}
                   </p>
                 )}
@@ -150,23 +150,23 @@ export function Hero() {
           <div className="relative max-w-4xl mx-auto mt-20 mb-24 h-100 hidden md:block">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 px-16">
               <div className="relative animate-fade-in">
-                <div className="w-28 md:w-32 h-36 md:h-40 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg transform -rotate-6 border-4 border-emerald-500/20 animate-float">
+                <div className="w-28 md:w-32 h-36 md:h-40 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg transform -rotate-6 border-4 border-blue-500/20 animate-float">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <FileText className="w-10 md:w-12 h-10 md:h-12 text-emerald-600/60" />
+                    <FileText className="w-10 md:w-12 h-10 md:h-12 text-blue-600/60" />
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-10 md:w-12 h-10 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center animate-pulse">
-                  <GripHorizontal className="w-5 md:w-6 h-5 md:h-6 text-emerald-600" />
+                <div className="absolute -bottom-4 -right-4 w-10 md:w-12 h-10 md:h-12 bg-blue-100 rounded-full flex items-center justify-center animate-pulse">
+                  <GripHorizontal className="w-5 md:w-6 h-5 md:h-6 text-blue-600" />
                 </div>
               </div>
 
               <div className="hidden md:block flex-1 mx-4">
-                <div className="h-0.5 bg-gradient-to-r from-emerald-500 to-emerald-600 relative animate-flow-right">
-                  <div className="absolute -top-1 right-0 w-2 h-2 bg-emerald-600 rounded-full animate-ping" />
-                  <div className="absolute -top-1 left-0 w-2 h-2 bg-emerald-500 rounded-full animate-ping" />
+                <div className="h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 relative animate-flow-right">
+                  <div className="absolute -top-1 right-0 w-2 h-2 bg-blue-600 rounded-full animate-ping" />
+                  <div className="absolute -top-1 left-0 w-2 h-2 bg-blue-500 rounded-full animate-ping" />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="px-3 py-1 bg-emerald-100 rounded-full">
-                      <span className="text-xs text-emerald-700 font-medium">
+                    <div className="px-3 py-1 bg-blue-100 rounded-full">
+                      <span className="text-xs text-blue-700 font-medium">
                         Processing
                       </span>
                     </div>
@@ -175,17 +175,17 @@ export function Hero() {
               </div>
 
               <div className="relative animate-fade-in animation-delay-500">
-                <div className="w-32 md:w-40 h-28 md:h-32 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg border-4 border-emerald-500/20 animate-brighten animation-delay-500">
+                <div className="w-32 md:w-40 h-28 md:h-32 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg border-4 border-blue-500/20 animate-brighten animation-delay-500">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Laptop className="w-14 md:w-16 h-14 md:h-16 text-emerald-600/60" />
+                    <Laptop className="w-14 md:w-16 h-14 md:h-16 text-blue-600/60" />
                   </div>
                 </div>
               </div>
 
               <div className="hidden md:block flex-1 mx-4">
-                <div className="h-0.5 bg-gradient-to-r from-emerald-600 to-blue-600 relative animate-flow-right animation-delay-2000">
+                <div className="h-0.5 bg-gradient-to-r from-blue-600 to-blue-600 relative animate-flow-right animation-delay-2000">
                   <div className="absolute -top-1 right-0 w-2 h-2 bg-blue-600 rounded-full animate-ping animation-delay-2000" />
-                  <div className="absolute -top-1 left-0 w-2 h-2 bg-emerald-600 rounded-full animate-ping animation-delay-2000" />
+                  <div className="absolute -top-1 left-0 w-2 h-2 bg-blue-600 rounded-full animate-ping animation-delay-2000" />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <div className="px-3 py-1 bg-blue-100 rounded-full">
                       <span className="text-xs text-blue-700 font-medium">
@@ -209,7 +209,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob pointer-events-none" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob pointer-events-none" />
           <div className="absolute top-20 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000 pointer-events-none" />
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000 pointer-events-none" />
         </div>

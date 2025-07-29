@@ -43,20 +43,20 @@ const config: Config = {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			primary: {
-  				DEFAULT: '#2C746E',
-  				hover: '#334B49',
-          dark: '#334b49',
+  				DEFAULT: '#2563eb',
+  				hover: '#1d4ed8',
+          dark: '#1e40af',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
-  				DEFAULT: '#96B1AD',
-  				light: '#8A9CC6',
-  				dark: '#566990',
+  				DEFAULT: '#3b82f6',
+  				light: '#60a5fa',
+  				dark: '#1d4ed8',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
         tertiary: {
           DEFAULT: '#ff5555',
-          dark: '#B3E626',
+          dark: '#2563eb',
           foreground: 'hsl(var(--tertiary-foreground))'
         },
   			destructive: {
@@ -68,8 +68,8 @@ const config: Config = {
   				foreground: 'hsl(var(--muted-foreground))'
   			},
   			accent: {
-  				DEFAULT: '#d3e3de80',
-  				green: '#009C67',
+  				DEFAULT: '#dbeafe80',
+  				green: '#2563eb',
   				foreground: 'hsl(var(--accent-foreground))'
   			},
   			popover: {

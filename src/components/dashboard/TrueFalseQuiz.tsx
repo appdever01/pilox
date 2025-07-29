@@ -215,8 +215,8 @@ export function TrueFalseQuiz({ questions, onClose, onNewQuiz, pdfName }: TrueFa
                   </div>
                   <p className="text-sm md:text-base text-muted-foreground">Total Score</p>
                 </div>
-                <div className="bg-green-500/10 rounded-xl p-4 md:p-6 text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">
+                <div className="bg-blue-500/10 rounded-xl p-4 md:p-6 text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {correctAnswers}
                   </div>
                   <p className="text-sm md:text-base text-muted-foreground">Correct Answers</p>
@@ -235,7 +235,7 @@ export function TrueFalseQuiz({ questions, onClose, onNewQuiz, pdfName }: TrueFa
                 {answers.map((question, index) => (
                   <div key={question.id} className={`p-4 md:p-6 rounded-lg border ${
                     question.userAnswer === question.correctAnswer 
-                      ? 'bg-green-500/5 border-green-500/20' 
+                      ? 'bg-blue-500/5 border-blue-500/20' 
                       : 'bg-red-500/5 border-red-500/20'
                   }`}>
                     <div className="flex items-start justify-between gap-4">
@@ -244,7 +244,7 @@ export function TrueFalseQuiz({ questions, onClose, onNewQuiz, pdfName }: TrueFa
                         <p className="text-xs md:text-sm text-muted-foreground">{question.question}</p>
                         <div className="flex items-center gap-2 text-xs md:text-sm">
                           <span className="font-medium">Your answer:</span>
-                          <span className={question.userAnswer === question.correctAnswer ? 'text-green-600' : 'text-red-600'}>
+                          <span className={question.userAnswer === question.correctAnswer ? 'text-blue-600' : 'text-red-600'}>
                             {question.userAnswer ? 'True' : 'False'}
                           </span>
                         </div>
@@ -289,7 +289,7 @@ export function TrueFalseQuiz({ questions, onClose, onNewQuiz, pdfName }: TrueFa
                         p-3 md:p-4 rounded-lg border transition-all text-sm md:text-base
                         ${currentQuestion.isChecked
                           ? answer === currentQuestion.correctAnswer
-                            ? 'border-green-500 bg-green-500/10'
+                            ? 'border-blue-500 bg-blue-500/10'
                             : answer === currentQuestion.userAnswer
                               ? 'border-red-500 bg-red-500/10'
                               : 'border-muted bg-muted/5'
@@ -303,7 +303,7 @@ export function TrueFalseQuiz({ questions, onClose, onNewQuiz, pdfName }: TrueFa
                         {currentQuestion.isChecked && (
                           <>
                             {answer === currentQuestion.correctAnswer && (
-                              <Check className="w-4 h-4 text-green-600" />
+                              <Check className="w-4 h-4 text-blue-600" />
                             )}
                             {answer === currentQuestion.userAnswer && answer !== currentQuestion.correctAnswer && (
                               <X className="w-4 h-4 text-red-600" />

@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button";
 export default function NotFound() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center relative overflow-hidden">
-      <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
       <div className="absolute top-20 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000" />
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000" />
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000" />
 
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
         <motion.div
@@ -19,7 +19,7 @@ export default function NotFound() {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          <h1 className="text-8xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">
+          <h1 className="text-8xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
             404
           </h1>
 
@@ -46,7 +46,7 @@ export default function NotFound() {
             </Button>
 
             <Link href="/" passHref>
-              <Button className="rounded-full bg-emerald-600 hover:bg-emerald-500 group">
+              <Button className="rounded-full bg-blue-600 hover:bg-blue-500 group">
                 <Home
                   className="w-4 h-4 mr-2 transition-transform duration-300 
                               group-hover:scale-110"

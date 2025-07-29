@@ -125,14 +125,14 @@ export function BuyCredit() {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <Star className="w-5 h-5 text-emerald-600" />
+            <Star className="w-5 h-5 text-blue-600" />
             Purchase Credits
           </DialogTitle>
         </DialogHeader>
 
         <div className="mt-4">
-          <div className="bg-red-50/80 rounded-2xl p-4 mb-6">
-            <div className="flex items-center gap-2 text-red-600">
+          <div className="bg-blue-50/80 rounded-2xl p-4 mb-6">
+            <div className="flex items-center gap-2 text-blue-600">
               <Info className="w-5 h-5" />
               <p className="text-sm">
                 Oops, insufficient credit... purchase to continue
@@ -140,8 +140,8 @@ export function BuyCredit() {
             </div>
           </div>
 
-          <div className="bg-emerald-50/80 rounded-2xl p-4 mb-6">
-            <div className="flex items-center gap-2 text-emerald-600">
+          <div className="bg-blue-50/80 rounded-2xl p-4 mb-6">
+            <div className="flex items-center gap-2 text-blue-600">
               <Info className="w-5 h-5" />
               <p className="text-sm">
                 1 credit = {currencySymbol}
@@ -175,7 +175,7 @@ export function BuyCredit() {
                          [&::-webkit-slider-thumb]:appearance-none
                          [&::-webkit-slider-thumb]:w-4
                          [&::-webkit-slider-thumb]:h-4
-                         [&::-webkit-slider-thumb]:bg-emerald-600
+                         [&::-webkit-slider-thumb]:bg-blue-600
                          [&::-webkit-slider-thumb]:rounded-full
                          [&::-webkit-slider-thumb]:cursor-pointer"
               />
@@ -191,7 +191,7 @@ export function BuyCredit() {
               max="1000"
               value={credits > 0 ? credits : ""}
               onChange={(e) => setCredits(Number(e.target.value))}
-              className="w-full h-10 px-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-transparent"
+              className="w-full h-10 px-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               placeholder="Enter amount of credits"
             />
           </div>
@@ -199,7 +199,7 @@ export function BuyCredit() {
           <Button
             onClick={pay}
             disabled={isLoading || credits <= 0}
-            className="mt-6 w-full bg-emerald-600 hover:bg-emerald-700 text-white h-12"
+            className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white h-12"
           >
             {isLoading ? (
               <Loader2 className="w-4 h-4 animate-spin mr-2" />

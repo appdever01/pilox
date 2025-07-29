@@ -69,9 +69,9 @@ export default function ClientLayout({
 
   return (
     <>
-      <meta name="theme-color" content="#2C746E" />
+      <meta name="theme-color" content="#2563eb" />
       <NextTopLoader
-        color="#2A9D8F"
+        color="#2563eb"
         initialPosition={0.08}
         crawlSpeed={200}
         height={3}
@@ -79,7 +79,7 @@ export default function ClientLayout({
         showSpinner={false}
         easing="ease"
         speed={200}
-        shadow="0 0 10px #2A9D8F,0 0 5px #2A9D8F"
+        shadow="0 0 10px #2563eb,0 0 5px #2563eb"
       />
       {isLoading && !isAuthPage && <Loader />}
       {!isAuthPage && <UserNavbar />}

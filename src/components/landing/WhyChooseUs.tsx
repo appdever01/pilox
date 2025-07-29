@@ -33,8 +33,8 @@ export function WhyChooseUs() {
       title: "AI-Powered Intelligence",
       description:
         "Experience next-gen document analysis with our advanced AI. From complex layouts to scanned documents, we handle it all effortlessly.",
-      iconBg: "bg-emerald-50",
-      iconColor: "text-emerald-500",
+      iconBg: "bg-blue-50",
+      iconColor: "text-blue-500",
     },
     {
       icon: FileText,
@@ -71,7 +71,7 @@ export function WhyChooseUs() {
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Trusted by Over{" "}
-              <span className="bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                 10,000 Users
               </span>
             </h2>
@@ -90,7 +90,7 @@ export function WhyChooseUs() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative bg-white rounded-2xl p-6 border border-gray-100
-                           hover:border-emerald-100 transition-all duration-300
+                           hover:border-blue-100 transition-all duration-300
                            hover:shadow-[0_0_50px_-12px_rgba(0,0,0,0.05)]"
                 >
                   <div className="flex gap-6">
@@ -123,7 +123,7 @@ export function WhyChooseUs() {
               style={{ height: contentHeight ? `${contentHeight}px` : "auto" }}
             >
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-transparent" />
                 <img
                   src="/feature_banner.jpg"
                   alt="PDFX Features"
@@ -131,7 +131,7 @@ export function WhyChooseUs() {
                 />
               </div>
 
-              <div className="absolute -z-10 top-1/2 right-0 w-72 h-72 bg-emerald-200/20 rounded-full blur-3xl" />
+              <div className="absolute -z-10 top-1/2 right-0 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
               <div className="absolute -z-10 bottom-0 left-1/2 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
             </div>
           </div>

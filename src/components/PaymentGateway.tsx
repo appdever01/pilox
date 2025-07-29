@@ -70,7 +70,7 @@ export default function PaymentGateway({ open, amount, currency, symbol, email, 
             </TabsTrigger>
             <TabsTrigger
               value="paystack"
-              className="data-[state=active]:bg-emerald-50 border-2 data-[state=active]:border-emerald-500 rounded-xl h-full"
+              className="data-[state=active]:bg-blue-50 border-2 data-[state=active]:border-blue-500 rounded-xl h-full"
             >
               <img src="/paystack.png" alt="Paystack" className="h-8" />
             </TabsTrigger>
@@ -78,7 +78,7 @@ export default function PaymentGateway({ open, amount, currency, symbol, email, 
 
           <div className="mt-8">
             <TabsContent value="paystack">
-              <div className="rounded-xl border p-6 bg-emerald-50/30">
+              <div className="rounded-xl border p-6 bg-blue-50/30">
                 <div className="space-y-4">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Amount</span>
@@ -89,7 +89,7 @@ export default function PaymentGateway({ open, amount, currency, symbol, email, 
                   <Button
                     onClick={handlePaystackPayment}
                     disabled={isLoading}
-                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white h-12"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white h-12"
                   >
                     {isLoading ? (
                       <Loader2 className="w-4 h-4 animate-spin mr-2" />

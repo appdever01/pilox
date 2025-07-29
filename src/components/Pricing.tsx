@@ -146,7 +146,7 @@ export function Pricing() {
 
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-800 text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-50 to-blue-100 text-blue-800 text-sm font-medium mb-8">
             <Wallet className="w-4 h-4" />
             <span>Simple Pricing</span>
           </div>
@@ -245,9 +245,9 @@ export function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="relative bg-emerald-50/30 rounded-3xl p-8 border border-emerald-100 flex flex-col"
+            className="relative bg-blue-50/30 rounded-3xl p-8 border border-blue-100 flex flex-col"
           >
-            <div className="absolute -top-3 left-6 px-4 py-1.5 bg-emerald-600 text-white text-sm rounded-full font-medium">
+            <div className="absolute -top-3 left-6 px-4 py-1.5 bg-blue-600 text-white text-sm rounded-full font-medium">
               Premium Features
             </div>
 
@@ -259,8 +259,8 @@ export function Pricing() {
                 Pay per use with credits
               </p>
 
-              <div className="bg-emerald-50/80 rounded-2xl p-4 mb-8">
-                <div className="flex items-center gap-2 text-emerald-600">
+              <div className="bg-blue-50/80 rounded-2xl p-4 mb-8">
+                <div className="flex items-center gap-2 text-blue-600">
                   <Star className="w-5 h-5" />
                   <p className="text-xs font-medium">
                     Access advanced AI features with credits
@@ -271,8 +271,8 @@ export function Pricing() {
               <div className="space-y-4">
                 {features.premium.map((feature, i) => (
                   <div key={i} className="flex items-center gap-3 group">
-                    <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
-                      <Star className="w-3 h-3 text-emerald-600" />
+                    <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center">
+                      <Star className="w-3 h-3 text-blue-600" />
                     </div>
                     <span className="text-gray-600">{feature}</span>
                   </div>
@@ -282,7 +282,7 @@ export function Pricing() {
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-emerald-600" />
+                    <Zap className="w-4 h-4 text-blue-600" />
                     <span className="font-medium">Buy Credits</span>
                   </div>
                   <TooltipProvider>
@@ -313,7 +313,7 @@ export function Pricing() {
                                [&::-webkit-slider-thumb]:appearance-none
                                [&::-webkit-slider-thumb]:w-4
                                [&::-webkit-slider-thumb]:h-4
-                               [&::-webkit-slider-thumb]:bg-emerald-600
+                               [&::-webkit-slider-thumb]:bg-blue-600
                                [&::-webkit-slider-thumb]:rounded-full
                                [&::-webkit-slider-thumb]:cursor-pointer"
                     />
@@ -329,7 +329,7 @@ export function Pricing() {
                       max="1000"
                       value={credits > 0 ? credits : ""}
                       onChange={(e) => setCredits(Number(e.target.value))}
-                      className="w-24 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-24 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <span className="text-sm text-muted-foreground">
                       credits
@@ -342,7 +342,7 @@ export function Pricing() {
             <Button
               onClick={pay}
               disabled={isLoading || credits <= 0}
-              className="mt-6 w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-full h-12"
+              className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white rounded-full h-12"
             >
               {isLoading ? (
                 <Loader2 className="w-4 h-4 animate-spin mr-2" />

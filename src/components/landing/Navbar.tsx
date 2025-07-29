@@ -134,8 +134,8 @@ export function Navbar() {
                   href={item.href || "#"}
                   className={`text-sm font-medium transition-colors ${
                     isActive(item.href || "#")
-                      ? "text-[#609966]"
-                      : "text-muted-foreground hover:text-[#609966]"
+                      ? "text-[#2563eb]"
+                      : "text-muted-foreground hover:text-[#2563eb]"
                   }`}
                 >
                   {item.name}

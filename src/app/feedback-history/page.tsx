@@ -169,8 +169,8 @@ export default function FeedbackHistoryPage() {
               
               <div className="bg-card rounded-xl p-6 border border-border/50">
                 <div className="flex items-center gap-3">
-                  <div className="bg-emerald-100 p-3 rounded-full">
-                    <Coins className="w-5 h-5 text-emerald-600" />
+                  <div className="bg-blue-100 p-3 rounded-full">
+                    <Coins className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Credits Earned</p>
@@ -183,8 +183,8 @@ export default function FeedbackHistoryPage() {
 
               <div className="bg-card rounded-xl p-6 border border-border/50">
                 <div className="flex items-center gap-3">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                  <div className="bg-blue-100 p-3 rounded-full">
+                    <CheckCircle className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Approved Reports</p>
@@ -276,7 +276,7 @@ export default function FeedbackHistoryPage() {
                               ? "bg-red-50 text-red-700"
                               : feedback.priority === "medium"
                               ? "bg-yellow-50 text-yellow-700"
-                              : "bg-green-50 text-green-700"
+                              : "bg-blue-50 text-blue-700"
                           }`}
                         >
                           {feedback.priority.toUpperCase()}
@@ -288,7 +288,7 @@ export default function FeedbackHistoryPage() {
                             feedback.status === "pending"
                               ? "bg-yellow-50 text-yellow-700"
                               : feedback.status === "verified"
-                              ? "bg-green-50 text-green-700"
+                              ? "bg-blue-50 text-blue-700"
                               : "bg-red-50 text-red-700"
                           }`}
                         >
@@ -302,7 +302,7 @@ export default function FeedbackHistoryPage() {
                       </td>
                       <td className="px-4 py-3 whitespace-nowrap">
                         {feedback.rewarded ? (
-                          <span className="text-xs font-medium text-green-600">
+                          <span className="text-xs font-medium text-blue-600">
                             +{feedback.rewardAmount} credits
                           </span>
                         ) : (

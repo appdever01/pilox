@@ -1291,7 +1291,7 @@ export default function ChatPage() {
                               title="Copy message"
                             >
                               {copiedMessageId === message.id ? (
-                                <Check className="w-4 h-4 text-green-500" />
+                                <Check className="w-4 h-4 text-blue-500" />
                               ) : (
                                 <Copy className="w-4 h-4 text-muted-foreground" />
                               )}

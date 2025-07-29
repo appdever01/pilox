@@ -117,15 +117,15 @@ export default function VerifyEmailTokenPage() {
 
             {status === "success" && (
               <>
-                <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
-                  <Icons.check className="h-10 w-10 text-green-600" />
+                <div className="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                  <Icons.check className="h-10 w-10 text-blue-600" />
                 </div>
                 <h1 className="text-2xl font-bold text-gray-900 mb-3">
                   Email Verified!
                 </h1>
                 <div className="text-center space-y-4 mb-8">
                   <p className="text-muted-foreground">{message}</p>
-                  <p className="text-sm text-green-600 font-medium">
+                  <p className="text-sm text-blue-600 font-medium">
                     Your account has been successfully verified. You can now
                     access all features.
                   </p>

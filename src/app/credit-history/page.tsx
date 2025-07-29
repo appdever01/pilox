@@ -140,7 +140,7 @@ export default function CreditHistoryPage() {
                         <span
                           className={`inline-flex px-2.5 py-1 rounded-full text-xs font-medium ${
                             item.type === "credit"
-                              ? "bg-emerald-50 text-emerald-700"
+                              ? "bg-blue-50 text-blue-700"
                               : "bg-red-50 text-red-700"
                           }`}
                         >
@@ -160,7 +160,7 @@ export default function CreditHistoryPage() {
                               ? "bg-yellow-50 text-yellow-700"
                               : item.status === "failed"
                                 ? "bg-red-50 text-red-700"
-                                : "bg-emerald-50 text-emerald-700"
+                                : "bg-blue-50 text-blue-700"
                           }`}
                         >
                           {item.status}

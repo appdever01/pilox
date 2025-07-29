@@ -124,12 +124,12 @@ export function Footer() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-6 py-4 rounded-full bg-[#111111] border-none text-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-600/50"
+                className="w-full px-6 py-4 rounded-full bg-[#111111] border-none text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600/50"
               />
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-emerald-600 text-white font-medium py-4 rounded-full hover:bg-emerald-500 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-blue-600 text-white font-medium py-4 rounded-full hover:bg-blue-500 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isLoading ? (
                   <>

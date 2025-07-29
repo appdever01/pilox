@@ -9,7 +9,7 @@ export function WhatsAppCommunity() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
               <Users className="w-4 h-4" />
               <span>Join Our Community</span>
             </div>
@@ -26,8 +26,8 @@ export function WhatsAppCommunity() {
 
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-green-100 rounded-lg">
-                  <MessageSquare className="w-5 h-5 text-green-600" />
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <MessageSquare className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
@@ -40,8 +40,8 @@ export function WhatsAppCommunity() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-green-100 rounded-lg">
-                  <Zap className="w-5 h-5 text-green-600" />
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Zap className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
@@ -58,7 +58,7 @@ export function WhatsAppCommunity() {
               href="https://chat.whatsapp.com/IMfN33ZuDxtD9obAkAPhYy"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all group"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all group"
             >
               <FontAwesomeIcon icon={faWhatsapp} className="w-5 h-5" />
               Join Community
@@ -68,10 +68,10 @@ export function WhatsAppCommunity() {
 
           {/* Right Content - Preview */}
           <div className="relative">
-            <div className="absolute -top-6 -right-6 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
+            <div className="absolute -top-6 -right-6 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
             <div className="relative bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
               <div className="flex items-center gap-3 border-b border-gray-100 pb-4 mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                   <img src="/pdfx.png" alt="PDFX" className="rounded-full" />
                 </div>
                 <div>

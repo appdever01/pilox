@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.next()
 
   // Add the theme color header
-  response.headers.set('theme-color', '#2C746E')
+  response.headers.set('theme-color', '#2563eb')
 
   // Add other security and PWA related headers
   response.headers.set('Cache-Control', 'public, max-age=0, must-revalidate')

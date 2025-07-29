@@ -18,8 +18,8 @@ const instrumentSans = Instrument_Sans({
 
 export const viewport: Viewport = {
   themeColor: [
-    { color: "#2C746E", media: "(prefers-color-scheme: light)" },
-    { color: "#2C746E", media: "(prefers-color-scheme: dark)" },
+    { color: "#2563eb", media: "(prefers-color-scheme: light)" },
+    { color: "#2563eb", media: "(prefers-color-scheme: dark)" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -87,10 +87,10 @@ export const metadata: Metadata = {
     ],
   },
   other: {
-    "theme-color": "#2C746E",
-    "msapplication-TileColor": "#2C746E",
-    "msapplication-navbutton-color": "#2C746E",
-    "apple-mobile-web-app-status-bar-style": "#2C746E",
+    "theme-color": "#2563eb",
+    "msapplication-TileColor": "#2563eb",
+    "msapplication-navbutton-color": "#2563eb",
+    "apple-mobile-web-app-status-bar-style": "#2563eb",
   },
 };
 
@@ -118,7 +118,7 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
         />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#2C746E" />
+        <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="PDFX" />

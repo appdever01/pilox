@@ -55,7 +55,7 @@ export function FAQ() {
 
           <h2 className="text-4xl md:text-5xl font-bold">
             Frequently Asked
-            <span className="block text-emerald-500">Questions</span>
+            <span className="block text-blue-500">Questions</span>
           </h2>
         </div>
 
@@ -73,7 +73,7 @@ export function FAQ() {
                   {faq.question}
                 </span>
                 <span
-                  className="text-2xl text-emerald-600 transition-transform duration-200"
+                  className="text-2xl text-blue-600 transition-transform duration-200"
                   style={{
                     transform:
                       openIndex === index ? "rotate(180deg)" : "rotate(0deg)",

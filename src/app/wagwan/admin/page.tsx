@@ -416,7 +416,7 @@ export default function AdminDashboard() {
         </div>
         {trend && (
           <div
-            className={`flex items-center gap-1 text-sm ${trend > 0 ? "text-green-500" : "text-red-500"}`}
+            className={`flex items-center gap-1 text-sm ${trend > 0 ? "text-blue-500" : "text-red-500"}`}
           >
             {trend > 0 ? (
               <ArrowUpRight className="w-4 h-4" />
@@ -525,7 +525,7 @@ export default function AdminDashboard() {
                 <span
                   className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                     user.status === "active"
-                      ? "bg-green-50 text-green-700"
+                      ? "bg-blue-50 text-blue-700"
                       : "bg-red-50 text-red-700"
                   }`}
                 >
@@ -654,7 +654,7 @@ export default function AdminDashboard() {
                           <span
                             className={`inline-flex px-2.5 py-1 rounded-full text-xs font-medium ${
                               item.type === "credit"
-                                ? "bg-emerald-50 text-emerald-700"
+                                ? "bg-blue-50 text-blue-700"
                                 : "bg-red-50 text-red-700"
                             }`}
                           >
@@ -668,7 +668,7 @@ export default function AdminDashboard() {
                           <span
                             className={`inline-flex px-2.5 py-1 rounded-full text-xs font-medium ${
                               item.status === "completed"
-                                ? "bg-emerald-50 text-emerald-700"
+                                ? "bg-blue-50 text-blue-700"
                                 : item.status === "pending"
                                   ? "bg-yellow-50 text-yellow-700"
                                   : "bg-red-50 text-red-700"
@@ -908,7 +908,7 @@ export default function AdminDashboard() {
                       <span
                         className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                           user.status === "active"
-                            ? "bg-green-50 text-green-700"
+                            ? "bg-blue-50 text-blue-700"
                             : "bg-red-50 text-red-700"
                         }`}
                       >
@@ -1114,7 +1114,7 @@ export default function AdminDashboard() {
                               ? "bg-red-50 text-red-700"
                               : feedback.priority === "medium"
                                 ? "bg-yellow-50 text-yellow-700"
-                                : "bg-green-50 text-green-700"
+                                : "bg-blue-50 text-blue-700"
                           }`}
                         >
                           {feedback.priority}
@@ -1129,7 +1129,7 @@ export default function AdminDashboard() {
                             feedback.status === "pending"
                               ? "bg-yellow-50 text-yellow-700"
                               : feedback.status === "verified"
-                                ? "bg-green-50 text-green-700"
+                                ? "bg-blue-50 text-blue-700"
                                 : "bg-red-50 text-red-700"
                           }`}
                         >
@@ -1146,7 +1146,7 @@ export default function AdminDashboard() {
                                 onClick={() =>
                                   handleVerifyFeedback(feedback.id)
                                 }
-                                className="text-green-600 hover:text-green-700"
+                                className="text-blue-600 hover:text-blue-700"
                               >
                                 <Check className="w-4 h-4 mr-1" />
                                 Verify

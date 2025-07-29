@@ -38,8 +38,8 @@ const tools = [
     title: "AI PDF Generator",
     description:
       "Transform your ideas into professionally formatted PDFs using advanced AI technology. Create documents from simple text prompts.",
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-50",
+    color: "text-blue-500",
+    bgColor: "bg-blue-50",
     route: "/generate-pdf",
   },
   {
