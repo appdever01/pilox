@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Refer a Friend - PDFX",
-  description: "Refer friends and earn rewards with PDFX.",
+  title: "Refer a Friend - PILOX",
+  description: "Refer friends and earn rewards with PILOX.",
 };
 
 export default function ChatLayout({

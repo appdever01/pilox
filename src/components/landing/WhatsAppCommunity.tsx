@@ -72,11 +72,11 @@ export function WhatsAppCommunity() {
             <div className="relative bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
               <div className="flex items-center gap-3 border-b border-gray-100 pb-4 mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <img src="/pdfx.png" alt="PDFX" className="rounded-full" />
+                  <img src="/pilox.png" alt="PILOX" className="rounded-full" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
-                    pdfx.chat 📃💬🩷
+                    pilox.com 📃💬🩷
                   </h3>
                   <p className="text-sm text-gray-500">1,234 members</p>
                 </div>

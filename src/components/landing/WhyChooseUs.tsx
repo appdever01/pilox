@@ -77,7 +77,7 @@ export function WhyChooseUs() {
             </h2>
 
             <p className="text-gray-600 text-lg mb-12">
-              Join thousands of satisfied users who trust PDFX for their document processing needs. 
+              Join thousands of satisfied users who trust PILOX for their document processing needs. 
               Enterprise security meets AI innovation.
             </p>
 
@@ -126,7 +126,7 @@ export function WhyChooseUs() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-transparent" />
                 <img
                   src="/feature_banner.jpg"
-                  alt="PDFX Features"
+                  alt="PILOX Features"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>

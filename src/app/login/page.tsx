@@ -12,7 +12,6 @@ import type { AuthResponse, LoginPayload } from "@/types/auth";
 import { Button } from "@/components/ui/button";
 import PublicRoute from "@/components/PublicRoute";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
-import GoogleAuthButton from "@/components/GoogleAuthButton";
 import Image from "next/image";
 
 export default function LoginPage() {
@@ -43,12 +42,20 @@ export default function LoginPage() {
         API_ROUTES.LOGIN,
         payload
       );
-      if (response.status == "success") {
-        auth.setUser(response.data.user);
-        if (response.data.user.token) {
-          auth.setToken(response.data.user.token);
+      
+      if (response.status === "success" && response.data?.user) {
+        const { user } = response.data;
+        if (!user.token) {
+          throw new Error("No token received from server");
         }
-        if (!response.data.user.isVerified) {
+        
+        // Store token first
+        auth.setToken(user.token);
+        
+        // Then store user data
+        auth.setUser(user);
+
+        if (!user.isVerified) {
           await auth.resendVerificationEmail();
           auth.setCooldownTime();
           router.push("/verify-email");
@@ -60,6 +67,7 @@ export default function LoginPage() {
         toast.error(response.message || "Login failed");
       }
     } catch (error: any) {
+      auth.removeToken(); // Clear any partial auth data on error
       toast.error(error.message || "Failed to login");
     } finally {
       setIsLoading(false);
@@ -164,14 +172,6 @@ export default function LoginPage() {
                 )}
               </Button>
             </form>
-
-            <div className="flex items-center justify-center text-xs my-6">
-              <span className="text-muted-foreground relative before:absolute before:right-full before:top-1/2 before:w-32 before:h-px before:bg-border after:absolute after:left-full after:top-1/2 after:w-32 after:h-px after:bg-border px-2">
-                or continue with
-              </span>
-            </div>
-
-            <GoogleAuthButton />
 
             <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
               <Link href="/faqs" className="hover:text-primary">

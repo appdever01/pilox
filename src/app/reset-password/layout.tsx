@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Reset Password | PDFX",
-  description: "Reset your PDFX password. Enter your new password to update your account."
+  title: "Reset Password | PILOX",
+  description: "Reset your PILOX password. Enter your new password to update your account."
 };
 
 export default function ChatLayout({

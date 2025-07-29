@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "AI YouTube Video Analysis & Chat | Video Content Assistant | PDFX",
+  title: "AI YouTube Video Analysis & Chat | Video Content Assistant | PILOX",
   description: "Transform YouTube videos into interactive learning experiences. Get AI-powered summaries, insights, and engage in meaningful conversations about any video content. Perfect for research and learning.",
 };
 

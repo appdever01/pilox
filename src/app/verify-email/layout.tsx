@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Verify Email | PDFX",
-  description: "Verify your email address to complete your PDFX account registration."
+  title: "Verify Email | PILOX",
+  description: "Verify your email address to complete your PILOX account registration."
 };
 
 export default function ChatLayout({

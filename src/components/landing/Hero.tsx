@@ -102,51 +102,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <div
-              {...(!isProcessing ? getRootProps() : {})}
-              className={`bg-white/50 backdrop-blur-sm border-2 border-dashed rounded-2xl p-12
-                         transition-all duration-300 ${
-                           isProcessing ? "cursor-default" : "cursor-pointer"
-                         }
-                         ${
-                           isDragActive
-                             ? "border-blue-500 bg-blue-50/50"
-                             : "border-gray-200 hover:border-blue-500/50"
-                         }`}
-            >
-              <input
-                {...(!isProcessing ? getInputProps() : {})}
-                disabled={isProcessing}
-              />
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
-                  {isProcessing ? (
-                    <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
-                  ) : (
-                    <Upload className="w-8 h-8 text-blue-600" />
-                  )}
-                </div>
-                <h3 className="text-xl font-semibold">
-                  {isProcessing
-                    ? "Processing..."
-                    : isDragActive
-                      ? "Drop your PDF here"
-                      : "Click to upload, or drag PDF here"}
-                </h3>
-                {selectedFile && (
-                  <p className="text-sm text-blue-600 font-medium">
-                    Selected: {selectedFile.name}
-                  </p>
-                )}
-                {!isProcessing && (
-                  <p className="text-sm text-gray-500">
-                    Maximum file size: 50MB
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
+         
           <div className="relative max-w-4xl mx-auto mt-20 mb-24 h-100 hidden md:block">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 px-16">
               <div className="relative animate-fade-in">

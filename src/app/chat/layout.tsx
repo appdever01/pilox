@@ -1,13 +1,15 @@
-export const metadata = {
-  title: "AI PDF Chat & Analysis | Smart Document Assistant ",
-  description:
-    "Chat with your PDF documents using advanced AI. Get instant answers, generate summaries, create quizzes, flashcards, and extract key insights. Experience the future of document interaction.",
-};
+"use client";
+
+import PrivateRoute from "@/components/PrivateRoute";
 
 export default function ChatLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <PrivateRoute requireVerification={true}>
+      {children}
+    </PrivateRoute>
+  );
 }

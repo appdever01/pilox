@@ -56,12 +56,6 @@ export function Navbar() {
         { name: "Images to PDF", href: "/images-to-pdf", icon: ImageIcon },
         { name: "Rearrange PDF", href: "/rearrange-pdf", icon: FileStack },
         {
-          name: "Convert Document",
-          href: "/convert-documents",
-          icon: FileStack,
-        },
-        { name: "LaTeX Renderer", href: "/latex-renderer", icon: FileText },
-        {
           name: "Chat with PDF",
           href: "/login",
           icon: MessageSquare,
@@ -93,7 +87,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center space-x-2 pl-2">
             <Image
               src="/logo.png"
-              alt="PDFX Logo"
+              alt="PILOX Logo"
               width={80}
               height={26}
               priority

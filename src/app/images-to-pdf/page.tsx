@@ -26,7 +26,7 @@ interface ImageFile {
 export default function ImageToPDFPage() {
   const [images, setImages] = useState<ImageFile[]>([]);
   const [isConverting, setIsConverting] = useState(false);
-  const [filename, setFilename] = useState("pdfx_combined");
+  const [filename, setFilename] = useState("pilox_combined");
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const newImages = acceptedFiles.map((file) => ({

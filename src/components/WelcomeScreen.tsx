@@ -136,7 +136,7 @@ export function WelcomeScreen({
       <div className="w-full max-w-md p-4">
         <div className="text-center space-y-2 mb-6">
           <h1 className="text-2xl font-bold tracking-tight">
-            Welcome to PDFX Chat
+            Welcome to PILOX Chat
           </h1>
           <p className="text-muted-foreground">
             Upload a PDF to start chatting with your documents

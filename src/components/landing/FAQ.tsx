@@ -8,9 +8,9 @@ export function FAQ() {
 
   const faqs = [
     {
-      question: "What tools does PDFX offer?",
+      question: "What tools does PILOX offer?",
       answer:
-        "PDFX offers a comprehensive suite of tools including Smart PDF Viewer, PDF Chat, PDF ↔ Images conversion, AI PDF Generator, Document Converter, and YouTube Chat. Each tool is designed to enhance your document interaction experience.",
+        "PILOX offers a comprehensive suite of tools including Smart PDF Viewer, PDF Chat, PDF ↔ Images conversion, AI PDF Generator, Document Converter, and YouTube Chat. Each tool is designed to enhance your document interaction experience.",
     },
     {
       question: "How does the credit system work?",

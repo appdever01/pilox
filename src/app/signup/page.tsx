@@ -10,7 +10,6 @@ import type { SignUpPayload } from "@/types/auth";
 import PublicRoute from "@/components/PublicRoute";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { useEffect, useState, Suspense } from "react";
-import GoogleAuthButton from "@/components/GoogleAuthButton";
 import Image from "next/image";
 
 export default function SignUpPage() {
@@ -270,15 +269,7 @@ export default function SignUpPage() {
               </Button>
             </form>
 
-            <div className="flex items-center justify-center text-xs my-6">
-              <span className="text-muted-foreground relative before:absolute before:right-full before:top-1/2 before:w-32 before:h-px before:bg-border after:absolute after:left-full after:top-1/2 after:w-32 after:h-px after:bg-border px-2">
-                or continue with
-              </span>
-            </div>
 
-            <Suspense>
-              <GoogleAuthButton />
-            </Suspense>
 
             <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
               <Link href="/faqs" className="hover:text-primary">

@@ -20,7 +20,7 @@ export interface User {
   status: string;
   country?: Country;
   currency?: Currency;
-  token?: string;
+  token: string; // Changed from optional to required since it's always present in login response
 }
 
 export interface AuthResponse {

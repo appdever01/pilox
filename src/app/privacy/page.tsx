@@ -260,6 +260,6 @@ export default function PrivacyPage() {
 }
 
 export const metadata = {
-  title: "Privacy Policy | PDFX",
-  description: "Privacy policy and data handling practices for PDFX document tools and AI assistant.",
+  title: "Privacy Policy | PILOX",
+  description: "Privacy policy and data handling practices for PILOX document tools and AI assistant.",
 };

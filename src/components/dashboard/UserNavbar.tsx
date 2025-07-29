@@ -102,12 +102,6 @@ export function UserNavbar() {
           isPro: true,
         },
         {
-          name: "Convert Documents",
-          href: "/convert-documents",
-          icon: FileOutput,
-          isPro: false,
-        },
-        {
           name: "Chat with PDF",
           href: "/chat",
           icon: MessageSquare,
@@ -118,13 +112,7 @@ export function UserNavbar() {
           href: "/rearrange-pdf",
           icon: FileStack,
           isPro: false,
-        },
-        {
-          name: "LaTeX Renderer",
-          href: "/latex-renderer",
-          icon: FileText,
-          isPro: false,
-        },
+        }
       ],
       icon: FileText,
     },
@@ -194,7 +182,7 @@ export function UserNavbar() {
             <Link href="/" className="flex items-center pl-2 sm:pl-0">
               <Image
                 src="/logo.png"
-                alt="PDFX Logo"
+                alt="PILOX Logo"
                 width={80}
                 height={26}
                 priority

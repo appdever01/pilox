@@ -86,9 +86,9 @@ export function PWAInstallPrompt() {
     >
       <div className="flex items-center justify-between">
         <div className="flex-1 mr-4">
-          <h3 className="font-semibold">Install PDFX App</h3>
+          <h3 className="font-semibold">Install PILOX App</h3>
           <p className="text-sm text-muted-foreground">
-            Add PDFX to your home screen for quick access
+            Add PILOX to your home screen for quick access
           </p>
         </div>
         <div className="flex gap-2">

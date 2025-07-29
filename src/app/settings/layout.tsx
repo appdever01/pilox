@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Settings - PDFX",
-  description: "Manage your PDFX account settings, preferences, and profile information.",
+  title: "Settings - PILOX",
+  description: "Manage your PILOX account settings, preferences, and profile information.",
 };
 
 export default function ChatLayout({

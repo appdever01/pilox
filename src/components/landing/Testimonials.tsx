@@ -14,7 +14,7 @@ const testimonials = [
   {
     id: 1,
     content:
-      "PDFX has revolutionized how I study. The quiz generation feature helps me prepare for exams effectively, and the AI chat makes understanding complex documents so much easier.",
+      "PILOX has revolutionized how I study. The quiz generation feature helps me prepare for exams effectively, and the AI chat makes understanding complex documents so much easier.",
     author: "Sarah J.",
     role: "Graduate Student",
     rating: 5,
@@ -91,7 +91,7 @@ export function Testimonials() {
             What Our Users Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover how PDFX is helping professionals and teams work smarter
+            Discover how PILOX is helping professionals and teams work smarter
           </p>
         </div>
 

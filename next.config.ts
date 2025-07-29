@@ -75,7 +75,7 @@ export default withPWA({
       },
     },
     {
-      urlPattern: /^https:\/\/api\.pdfx\.chat/,
+      urlPattern: /^https:\/\/api\.pilox\.chat/,
       handler: "NetworkFirst",
       options: {
         cacheName: "api-cache",

@@ -13,24 +13,7 @@ import { toast } from "sonner";
 import { useState } from "react";
 import { API_BASE_URL, API_ROUTES } from "@/lib/config";
 
-const footerSections = {
-  tools: [
-    { name: "Smart PDF Viewer", href: "/pdf-viewer" },
-    { name: "PDF Chat", href: "/chat" },
-    { name: "PDF ↔ Images", href: "/pdf-to-images" },
-    { name: "AI PDF Generator", href: "/generate-pdf" },
-    { name: "Document Converter", href: "/convert-documents" },
-    { name: "YouTube Chat", href: "/youtube-chat" },
-    { name: "LaTeX Renderer", href: "/latex-renderer" },
-  ],
 
-  legal: [
-    { name: "Pricing", href: "/#pricing" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Support", href: "mailto:support@pdfx.chat" },
-  ],
-};
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -85,39 +68,39 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-6">
               <Image
                 src="/logo_white.png"
-                alt="PDFX Logo"
+                alt="PILOX Logo"
                 width={100}
                 height={20}
               />
             </div>
 
             <p className="text-gray-500 max-w-md mb-8">
-              Transform your documents with AI-powered intelligence. PDFX
+              Transform your documents with AI-powered intelligence. PILOX
               delivers advanced PDF tools for seamless document management.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <div className="bg-[#111111] rounded-full px-6 py-3 flex-shrink-0">
                 <a
-                  href="mailto:support@pdfx.chat"
+                  href="mailto:support@pilox.com"
                   className="text-gray-300 whitespace-nowrap"
                 >
-                  support@pdfx.chat
+                  support@pilox.com
                 </a>
               </div>
               <div className="bg-[#111111] rounded-full px-6 py-3 flex-shrink-0">
                 <a
-                  href="mailto:hello@pdfx.chat"
+                  href="mailto:hello@pilox.com"
                   className="text-gray-300 whitespace-nowrap"
                 >
-                  hello@pdfx.chat
+                  hello@pilox.com
                 </a>
               </div>
             </div>
           </div>
 
           <div className="lg:max-w-md w-full">
-            <h3 className="text-xl mb-6">Stay updated with PDFX</h3>
+            <h3 className="text-xl mb-6">Stay updated with PILOX</h3>
             <form onSubmit={handleSubscribe} className="space-y-4">
               <input
                 type="email"
@@ -152,13 +135,13 @@ export function Footer() {
               {[
                 {
                   icon: faFacebookF,
-                  href: "https://www.facebook.com/profile.php?id=61571592123557&mibextid=ZbWKwL",
+                  href: "#",
                 },
-                { icon: faXTwitter, href: "https://x.com/pdfx_chat" },
-                { icon: faInstagram, href: "https://instagram.com/pdfx.chat" },
+                { icon: faXTwitter, href: "#" },
+                { icon: faInstagram, href: "#" },
                 {
                   icon: faLinkedinIn,
-                  href: "https://ng.linkedin.com/company/tekcify",
+                  href: "#",
                 },
               ].map((social, index) => (
                 <Link
@@ -173,43 +156,11 @@ export function Footer() {
               ))}
             </div>
             <p className="text-sm text-gray-500 mt-8">
-              © {new Date().getFullYear()} Tekcify. All rights reserved.
+              © {new Date().getFullYear()} PILOX. All rights reserved.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16">
-            <div>
-              <h3 className="text-lg font-medium mb-6">Tools</h3>
-              <ul className="space-y-4">
-                {footerSections.tools.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-500 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-medium mb-6">Legal</h3>
-              <ul className="space-y-4">
-                {footerSections.legal.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-500 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+       
         </div>
       </div>
     </footer>

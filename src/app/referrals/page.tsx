@@ -64,9 +64,9 @@ export default function ReferralsPage() {
   const [messageCopied, setMessageCopied] = useState(false);
 
   const referralCode = user?.referralCode || "";
-  const referralLink = `https://pdfx.chat/signup/${referralCode}`;
+  const referralLink = `https://pilox.com/signup/${referralCode}`;
 
-  const referralMessage = `🚀 Discover PDFX.chat - Your All-in-One Document AI Assistant!
+  const referralMessage = `🚀 Discover pilox.com - Your All-in-One Document AI Assistant!
 
 Unlock powerful features:
 ✨ Smart PDF Chat - Get instant answers from any document
@@ -163,7 +163,7 @@ Join me on this AI-powered learning journey! Use my referral code "${referralCod
     try {
       if (navigator.share) {
         await navigator.share({
-          title: "Join me on PDFX.chat",
+          title: "Join me on pilox.com",
           text: referralMessage,
           url: referralLink,
         });

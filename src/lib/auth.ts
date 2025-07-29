@@ -7,9 +7,9 @@ import type {
 import AuthApiClient from "@/lib/auth-api-client";
 import { API_BASE_URL, API_ROUTES } from "./config";
 
-const TOKEN_KEY = "pdfx_token";
+const TOKEN_KEY = "pilox_token";
 const FIRST_VISIT_KEY = "first_visit";
-const USER_KEY = "pdfx_user";
+const USER_KEY = "pilox_user";
 const API_URL = API_BASE_URL;
 const RESEND_COOLDOWN_KEY = "resend_cooldown";
 
@@ -18,6 +18,7 @@ interface ApiResponse<T = any> {
   message: string;
   data?: {
     user: User;
+    token?: string;
   };
 }
 
@@ -26,6 +27,7 @@ interface UserDetailsResponse {
   message: string;
   data: {
     user: User;
+    token?: string;
   };
 }
 
@@ -35,12 +37,17 @@ const apiCall = async <T>(
   options: RequestInit = {}
 ): Promise<ApiResponse<T>> => {
   try {
+    const token = auth.getToken();
+    const headers = {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...options.headers,
+    };
+
     const response = await fetch(`${API_URL}${endpoint}`, {
       ...options,
-      headers: {
-        "Content-Type": "application/json",
-        ...options.headers,
-      },
+      headers,
+      credentials: "include",
     });
 
     const data = await response.json();
@@ -92,9 +99,14 @@ export const auth = {
       return;
     }
     try {
-      const { token, ...user } = userData;
-      if (token) this.setToken(token);
-      localStorage.setItem(USER_KEY, JSON.stringify(user));
+      // Extract token from userData and store it
+      if (userData.token) {
+        this.setToken(userData.token);
+      }
+      
+      // Store user data without token to avoid duplication
+      const { token, ...userWithoutToken } = userData;
+      localStorage.setItem(USER_KEY, JSON.stringify(userWithoutToken));
     } catch (error) {
       console.error("Error storing user data:", error);
       this.removeToken();
@@ -106,10 +118,11 @@ export const auth = {
 
     try {
       const userStr = localStorage.getItem(USER_KEY);
+      const token = this.getToken();
       if (!userStr) return null;
 
-      const userData = JSON.parse(userStr);
-      return userData.user || userData;
+      const user = JSON.parse(userStr);
+      return token ? { ...user, token } : user;
     } catch (error) {
       console.error("Error parsing user data:", error);
       this.removeToken();
@@ -149,21 +162,32 @@ export const auth = {
 
   async verifyAuth(): Promise<boolean> {
     const token = this.getToken();
-    if (!token) return false;
+    if (!token) {
+      this.removeToken();
+      return false;
+    }
 
     try {
       const response = await AuthApiClient.get<UserDetailsResponse>(
         API_ROUTES.USER_DETAILS
       );
-      if (response.status === "success") {
-        auth.updateUser(response.data.user);
-        this.setUser(response.data.user);
-      } else {
-        auth.removeToken();
+      
+      if (response.status === "success" && response.data?.user) {
+        // Keep the current token if the verification was successful
+        const userData = { ...response.data.user, token };
+        this.setUser(userData);
+        return true;
       }
-      return true;
-    } catch (error) {
+      
+      // If verification failed, clean up auth data
       this.removeToken();
+      return false;
+    } catch (error: any) {
+      // If there's a 401 error, it means the token is invalid
+      if (error.status === 401) {
+        this.removeToken();
+      }
+      console.error("Error verifying auth:", error);
       return false;
     }
   },
@@ -173,8 +197,9 @@ export const auth = {
       method: "POST",
       body: JSON.stringify(payload),
     });
-    if (response.status === "success") {
-      this.setUser(response.data?.user);
+    if (response.status === "success" && response.data) {
+      const { user, token } = response.data;
+      this.setUser({ ...user, token });
       this.setCooldownTime();
       router.push("/verify-email");
     } else {
@@ -193,28 +218,27 @@ export const auth = {
   async resendVerificationEmail() {
     const token = this.getToken();
     if (!token) throw new Error("No auth token found");
+    
     const cooldownRemaining = this.getCooldownRemaining();
     if (cooldownRemaining > 0) {
       const minutes = Math.floor(cooldownRemaining / 60);
       const seconds = cooldownRemaining % 60;
       throw new Error(
-        `Your email is not verified, a verification email has been sent. Please wait ${minutes}:${seconds.toString().padStart(2, "0")} minutes before trying to login again`
+        `Please wait ${minutes}:${seconds.toString().padStart(2, "0")} minutes before requesting another verification email`
       );
     }
-    const data = await fetch(
-      `${API_URL}${API_ROUTES.RESEND_VERIFICATION_EMAIL}`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-    const json = await data.json();
-    if (json.status === "success") {
+
+    const response = await apiCall(API_ROUTES.RESEND_VERIFICATION_EMAIL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (response.status === "success") {
       this.setCooldownTime();
     } else {
-      throw new Error(json.message);
+      throw new Error(response.message);
     }
   },
 
@@ -239,7 +263,9 @@ export const auth = {
       const currentUser = this.getUser();
       const updatedUser = { ...currentUser, ...userData };
       localStorage.setItem(USER_KEY, JSON.stringify(updatedUser));
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error updating user data:", error);
+    }
   },
 
   isUserVerified(): boolean {

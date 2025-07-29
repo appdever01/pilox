@@ -85,7 +85,7 @@ export const apiCall = async <T>(
   options: RequestInit = {},
   router?: any
 ): Promise<T> => {
-  const API_URL = "https://api.pdfx.chat/api";
+  const API_URL = "https://api.pilox.com/api";
   const token = auth.getToken();
 
   try {

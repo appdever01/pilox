@@ -1,7 +1,7 @@
 export const API_BASE_URL =
-  process.env.API_BASE_URL || "https://api.pdfx.chat/api";
+  process.env.API_BASE_URL || "http://localhost:9001/api";
 
-// "https://api.pdfx.chat/api";
+// "https://api.pilox.com/api";
 export const API_ROUTES = {
   NEWSLETTER_SUBSCRIBE: "/auth/newsletter-subscribe",
   SIGNUP: "/auth/signup",

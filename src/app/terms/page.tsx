@@ -52,7 +52,7 @@ export default function TermsPage() {
               </h2>
               <div className="prose prose-gray max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  By accessing or using PDFX services, you agree to be bound by these Terms of Service. Our services include PDF processing, AI-powered analysis, document conversion, and related features.
+                  By accessing or using PILOX services, you agree to be bound by these Terms of Service. Our services include PDF processing, AI-powered analysis, document conversion, and related features.
                 </p>
                 <div className="grid gap-6">
                   <div className="bg-background/50 p-6 rounded-lg border border-border/50">
@@ -142,6 +142,6 @@ export default function TermsPage() {
 }
 
 export const metadata = {
-  title: "Terms of Service | PDFX",
-  description: "Terms of service and usage guidelines for PDFX document tools and AI assistant.",
+  title: "Terms of Service | PILOX",
+  description: "Terms of service and usage guidelines for PILOX document tools and AI assistant.",
 };

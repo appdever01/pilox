@@ -1483,18 +1483,7 @@ export default function ChatPage() {
                           <Sparkles className="mr-2 h-4 w-4" />
                           <span>Generate Quiz</span>
                         </DropdownMenuItem>
-                        <DropdownMenuItem
-                          onClick={() => {
-                            setIsVideoExplanationOpen(true);
-                            setIsSidebarOpen(false);
-                          }}
-                          className="cursor-pointer"
-                        >
-                          <div className="flex items-center w-full">
-                            <Youtube className="mr-2 h-4 w-4" />
-                            <span>Generate Video</span>
-                          </div>
-                        </DropdownMenuItem>
+                     
                         <DropdownMenuItem
                           onClick={() => {
                             if (!pdfUrl) {
@@ -1548,14 +1537,7 @@ export default function ChatPage() {
           totalPages={pdfInfo.pageCount}
         />
 
-        <VideoExplanation
-          isOpen={isVideoExplanationOpen}
-          onClose={() => setIsVideoExplanationOpen(false)}
-          pdfUrl={pdfUrl}
-          currentPdfId={currentPdfId}
-          onGenerateVideo={handleGenerateVideo}
-          isGenerating={isGeneratingVideo}
-        />
+
 
         {selectedVideo && (
           <VideoPlayer

@@ -4,8 +4,8 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/chat",
-  "name": "PDFX",
-  "short_name": "PDFX",
+  "name": "PILOX",
+  "short_name": "PILOX",
   "description": "Transform documents with AI-powered tools. Convert, edit, and analyze PDFs.",
   "icons": [
     {

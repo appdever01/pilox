@@ -58,7 +58,7 @@ export function IOSInstallPrompt() {
                   src="/icons/72x72.png"
                   className="w-full h-full"
                   draggable={false}
-                  alt="PDFX Icon"
+                  alt="PILOX Icon"
                 />
               </figure>
             </div>
@@ -66,7 +66,7 @@ export function IOSInstallPrompt() {
             {/* Text */}
             <div className="space-y-2 mb-6">
               <h3 className="font-semibold text-lg">
-                Install PDFX on your iPhone
+                Install PILOX on your iPhone
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Get the full app experience! Tap the share button
@@ -93,7 +93,7 @@ export function IOSInstallPrompt() {
                 <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary font-medium">
                   3
                 </div>
-                <span>Tap &quot;Add&quot; to install PDFX</span>
+                <span>Tap &quot;Add&quot; to install PILOX</span>
               </div>
             </div>
 

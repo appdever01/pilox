@@ -548,8 +548,8 @@ define(["./workbox-3cafb6cd"], function (e) {
           url: "/pdf.worker.min.js",
           revision: "1b21a52673403baa815d90e3c9347714",
         },
-        { url: "/pdfx-bg.png", revision: "eaa992f2c5086a4a9c5c9ca19e6fdf63" },
-        { url: "/pdfx.png", revision: "07255a6893dc79d7bfcca7b887ad6018" },
+        { url: "/pilox-bg.png", revision: "eaa992f2c5086a4a9c5c9ca19e6fdf63" },
+        { url: "/pilox.png", revision: "07255a6893dc79d7bfcca7b887ad6018" },
         {
           url: "/reset_banner.jpg",
           revision: "66d96ed70c430d25db0b19f4b9b03943",
@@ -610,7 +610,7 @@ define(["./workbox-3cafb6cd"], function (e) {
       "GET"
     ),
     e.registerRoute(
-      /^https:\/\/api\.pdfx\.chat/,
+      /^https:\/\/api\.pilox\.chat/,
       new e.NetworkFirst({
         cacheName: "api-cache",
         plugins: [

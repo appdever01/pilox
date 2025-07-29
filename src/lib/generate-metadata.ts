@@ -7,7 +7,7 @@ export function generateMetadata(path: string): Metadata {
     seoConfig.default;
 
   return {
-    metadataBase: new URL("https://pdfx.chat"),
+    metadataBase: new URL("https://pilox.com"),
     title: routeConfig.title,
     description: routeConfig.description,
     authors: [{ name: "Tekcify" }],
@@ -21,8 +21,8 @@ export function generateMetadata(path: string): Metadata {
     openGraph: {
       type: "website",
       locale: "en_US",
-      url: `https://pdfx.chat${path}`,
-      siteName: "PDFX",
+      url: `https://pilox.com${path}`,
+      siteName: "PILOX",
       title: routeConfig.title,
       description: routeConfig.description,
     },
@@ -30,7 +30,7 @@ export function generateMetadata(path: string): Metadata {
       card: "summary_large_image",
       title: routeConfig.title,
       description: routeConfig.description,
-      creator: "@pdfx_chat",
+      creator: "@pilox_chat",
     },
     robots: {
       index: true,

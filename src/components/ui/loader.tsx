@@ -27,7 +27,7 @@ export function Loader() {
           >
             <Image
               src="/logo.png"
-              alt="PDFX Logo"
+              alt="PILOX Logo"
               width={80}
               height={80}
               className="object-contain"

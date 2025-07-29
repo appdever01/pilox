@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Signup - PDFX",
-  description: "Sign up for PDFX. Create an account to start using our services.",
+  title: "Signup - PILOX",
+  description: "Sign up for PILOX. Create an account to start using our services.",
 };
 
 export default function ChatLayout({

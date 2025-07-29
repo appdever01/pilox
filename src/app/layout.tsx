@@ -2,7 +2,6 @@ import "./globals.css";
 import { Metadata, Viewport } from "next";
 import { Toaster } from "sonner";
 import NextTopLoader from "nextjs-toploader";
-import TawkWidget from "@/components/TawkWidget";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Instrument_Sans } from "next/font/google";
 import ClientLayout from "@/components/ClientLayout";
@@ -28,20 +27,20 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pdfx.chat"),
+  metadataBase: new URL("https://pilox.com"),
 
   title: {
     default:
-      "PDFX - Ultimate AI PDF Tools & Document Assistant | Free PDF Converter & Editor",
-    template: "%s - PDFX",
+      "PILOX - Ultimate AI PDF Tools & Document Assistant | Free PDF Converter & Editor",
+    template: "%s - PILOX",
   },
   description:
-    "Transform documents with PDFX's AI-powered tools. Convert, edit, and analyze PDFs for free. Features LaTeX rendering, image conversion, document chat, quiz generation, and video explanations.",
+    "Transform documents with PILOX's AI-powered tools. Convert, edit, and analyze PDFs for free. Features LaTeX rendering, image conversion, document chat, quiz generation, and video explanations.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "PDFX",
+    title: "PILOX",
     startupImage: [
       {
         url: "/splash/apple-splash-2048-2732.png",
@@ -121,7 +120,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="PDFX" />
+        <meta name="apple-mobile-web-app-title" content="PILOX" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         <meta
           name="viewport"
@@ -153,7 +152,6 @@ export default function RootLayout({
 
         <GoogleAnalytics />
 
-        <TawkWidget />
 
         <Toaster richColors position="top-center" />
       </body>

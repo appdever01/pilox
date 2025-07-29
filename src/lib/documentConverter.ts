@@ -17,7 +17,7 @@ export async function convertDocument(
     formData.append("target_format", targetFormat.toLowerCase());
 
     const response = await fetch(
-      "https://services.pdfx.chat/convert-document",
+      "https://services.pilox.com/convert-document",
       {
         method: "POST",
         headers: {
