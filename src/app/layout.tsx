@@ -11,7 +11,6 @@ import { IOSInstallPrompt } from "@/components/IOSInstallPrompt";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
 import GoogleOAuthWrapper from "@/components/shared/GoogleOAuthProvider";
 import { WagmiProvider } from "@/components/shared/WagmiProvider";
-import { ConnectWallet } from "@/components/shared/ConnectWallet";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -147,9 +146,6 @@ export default function RootLayout({
         <WagmiProvider>
           <VerificationCheck>
             <GoogleOAuthWrapper>
-              <div className="fixed top-4 right-4 z-50">
-                <ConnectWallet />
-              </div>
               <ClientLayout>{children}</ClientLayout>
             </GoogleOAuthWrapper>
           </VerificationCheck>
