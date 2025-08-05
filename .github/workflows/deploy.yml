@@ -25,6 +25,5 @@ jobs:
           cd htdocs/pilox.com.ng
           git pull origin main
           pnpm install
-          /home/pilox/.nvm/versions/node/v22.18.0/bin/pnpm install
         " > temp_dev.sh
         sshpass -p "${{ secrets.PILOX_VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.PILOX_VPS_USER }}@${{ secrets.VPS_HOST }} 'bash -s' < temp_dev.sh
