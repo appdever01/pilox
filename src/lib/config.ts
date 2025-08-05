@@ -1,5 +1,5 @@
 export const API_BASE_URL =
-  process.env.API_BASE_URL || "http://localhost:9001/api";
+  process.env.API_BASE_URL || "https://api.pilox.com.ng/api";
 
 // "https://api.pilox.com/api";
 export const API_ROUTES = {
