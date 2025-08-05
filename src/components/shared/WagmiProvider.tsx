@@ -10,7 +10,7 @@ import {
 } from 'wagmi/connectors';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-const projectId = process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || '';
+const projectId = process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || '4a076acc13640a16dbc52c89d2e74f95';
 
 const metadata = {
   name: 'PILOX',
