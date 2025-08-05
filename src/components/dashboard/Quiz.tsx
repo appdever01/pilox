@@ -445,7 +445,7 @@ export function Quiz({
     doc.setFontSize(10);
     doc.setTextColor(128, 128, 128);
     doc.text(
-      "This quiz is generated from https://pilox.com",
+      "This quiz is generated from https://pilox.com.ng",
       doc.internal.pageSize.width / 2,
       pageHeight - 10,
       { align: "center" }

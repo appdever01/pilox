@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     console.log('Files in temp directory:', files);
 
     
-    const outputFile = files.find(f => 
+    const outputFile = files.find(f =>
       f.toLowerCase().endsWith(`.${targetFormat.toLowerCase()}`) && 
       f.toLowerCase() !== inputName.toLowerCase()
     );
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
     const outputPath = path.join(tempDir, outputFile);
     const convertedBuffer = await readFile(outputPath);
     
-    const blob = new Blob([convertedBuffer], { 
+    const blob = new Blob([Buffer.from(convertedBuffer)], { 
       type: getMimeType(targetFormat) 
     });
 

@@ -64,7 +64,7 @@ export default function ReferralsPage() {
   const [messageCopied, setMessageCopied] = useState(false);
 
   const referralCode = user?.referralCode || "";
-  const referralLink = `https://pilox.com/signup/${referralCode}`;
+  const referralLink = `https://pilox.com.ng/signup/${referralCode}`;
 
   const referralMessage = `🚀 Discover pilox.com - Your All-in-One Document AI Assistant!
 

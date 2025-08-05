@@ -7,7 +7,7 @@ export function generateMetadata(path: string): Metadata {
     seoConfig.default;
 
   return {
-    metadataBase: new URL("https://pilox.com"),
+    metadataBase: new URL("https://pilox.com.ng"),
     title: routeConfig.title,
     description: routeConfig.description,
     authors: [{ name: "Tekcify" }],
@@ -21,7 +21,7 @@ export function generateMetadata(path: string): Metadata {
     openGraph: {
       type: "website",
       locale: "en_US",
-      url: `https://pilox.com${path}`,
+      url: `https://pilox.com.ng${path}`,
       siteName: "PILOX",
       title: routeConfig.title,
       description: routeConfig.description,

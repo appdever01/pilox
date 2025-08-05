@@ -54,7 +54,7 @@ export default function SettingsPage() {
   const [copied, setCopied] = useState(false);
 
   const referralCode = user?.referralCode || "";
-  const referralLink = `https://pilox.com/signup/${referralCode}`;
+  const referralLink = `https://pilox.com.ng/signup/${referralCode}`;
 
   const handleProfileUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
