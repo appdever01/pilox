@@ -67,7 +67,7 @@ export function Footer() {
           <div className="mb-12 lg:mb-0">
             <div className="flex items-center gap-2 mb-6">
               <Image
-                src="/logo_white.png"
+                src="/logo.png"
                 alt="PILOX Logo"
                 width={100}
                 height={20}

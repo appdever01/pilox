@@ -1,5 +1,5 @@
 export const API_BASE_URL =
-  process.env.API_BASE_URL || "http://localhost:9001/api";
+  process.env.API_BASE_URL || "https://api.pilox.com.ng/api";
 
 // "https://api.pilox.com/api";
 export const API_ROUTES = {
@@ -44,4 +44,6 @@ export const API_ROUTES = {
   SUBMIT_FEEDBACK: "/feedback/submit",
   FEEDBACK_HISTORY: "/feedback/history",
   FEEDBACK_DATA: "/feedback/data",
+  SET_WALLET_ADDRESS: "/user/set-wallet-address",
+  SWAP_TOKEN: "/user/swap-token",
 } as const;

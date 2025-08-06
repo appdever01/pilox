@@ -39,6 +39,7 @@ import AuthApiClient from "@/lib/auth-api-client";
 import { API_ROUTES } from "@/lib/config";
 import "react-toastify/dist/ReactToastify.css";
 import { Navbar } from "../landing/Navbar";
+import { ConnectWallet } from "../shared/ConnectWallet";
 
 interface UserDetailsResponse {
   user: User;
@@ -242,6 +243,7 @@ export function UserNavbar() {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-4">
+            <ConnectWallet />
             <Link
               href="/pricing"
               className="flex px-3 py-1 bg-primary/10 rounded-full text-sm font-medium text-primary items-center gap-1 hover:bg-primary/20 transition-colors"

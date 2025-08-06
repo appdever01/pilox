@@ -1,0 +1,31 @@
+name: Auto Deploy to pilox
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install sshpass
+      run: sudo apt-get install -y sshpass
+
+    - name: Run deploy script
+      run: |
+        echo "
+          export NVM_DIR=\$HOME/.nvm
+          source \$NVM_DIR/nvm.sh
+          nvm use 22
+          cd htdocs/pilox.com.ng
+          git pull origin main
+          pnpm install
+          pnpm run build
+          /home/pilox/.nvm/versions/node/v22.18.0/bin/pm2 restart pilox
+        " > temp_dev.sh
+        sshpass -p "${{ secrets.PILOX_VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.PILOX_VPS_USER }}@${{ secrets.VPS_HOST }} 'bash -s' < temp_dev.sh

@@ -10,6 +10,8 @@ import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import { IOSInstallPrompt } from "@/components/IOSInstallPrompt";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
 import GoogleOAuthWrapper from "@/components/shared/GoogleOAuthProvider";
+import { WagmiProvider } from "@/components/shared/WagmiProvider";
+
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -27,7 +29,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pilox.com"),
+  metadataBase: new URL("https://pilox.com.ng"),
 
   title: {
     default:
@@ -141,11 +143,13 @@ export default function RootLayout({
 
         <ServiceWorkerRegistration />
 
-        <VerificationCheck>
-          <GoogleOAuthWrapper>
-            <ClientLayout>{children}</ClientLayout>
-          </GoogleOAuthWrapper>
-        </VerificationCheck>
+        <WagmiProvider>
+          <VerificationCheck>
+            <GoogleOAuthWrapper>
+              <ClientLayout>{children}</ClientLayout>
+            </GoogleOAuthWrapper>
+          </VerificationCheck>
+        </WagmiProvider>
 
         <IOSInstallPrompt />
         <PWAInstallPrompt />

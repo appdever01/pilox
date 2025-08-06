@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { Share, X } from "lucide-react";
 import { useState, useEffect } from "react";
-// import logo from "../../public/icons/72x72.png";
+// import logo from "../../public/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 export function IOSInstallPrompt() {
   const [showPrompt, setShowPrompt] = useState(false);
@@ -55,7 +55,7 @@ export function IOSInstallPrompt() {
             <div className="mb-4">
               <figure className="w-12 h-12 flex items-center justify-center">
                 <img
-                  src="/icons/72x72.png"
+                  src="/logo.png"
                   className="w-full h-full"
                   draggable={false}
                   alt="PILOX Icon"

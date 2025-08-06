@@ -71,7 +71,7 @@ export const addFooter = (doc: jsPDF) => {
   doc.setFontSize(10);
   doc.setTextColor(128, 128, 128);
   doc.text(
-    "Generated from https://pilox.com",
+    "Generated from https://pilox.com.ng",
     doc.internal.pageSize.width / 2,
     pageHeight - 10,
     { align: "center" }

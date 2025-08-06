@@ -11,7 +11,7 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "/icons/72x72.png",
+      "src": "/logo.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "any"
@@ -23,7 +23,7 @@
       "purpose": "maskable"
     },
     {
-      "src": "/icons/72x72.png",
+      "src": "/logo.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "any"
@@ -43,7 +43,7 @@
       "short_name": "Upload",
       "description": "Upload a new PDF document",
       "url": "/?source=pwa",
-      "icons": [{ "src": "/icons/72x72.png", "sizes": "72x72" }]
+      "icons": [{ "src": "/logo.png", "sizes": "72x72" }]
     }
   ],
   "categories": ["productivity", "utilities"],

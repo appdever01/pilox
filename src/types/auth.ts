@@ -21,6 +21,7 @@ export interface User {
   country?: Country;
   currency?: Currency;
   token: string; // Changed from optional to required since it's always present in login response
+  walletAddress?: string;
 }
 
 export interface AuthResponse {
