@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Confetti } from '@/components/ui/confetti';
 import { SuccessModal } from '@/components/ui/success-modal';
 import { TokenImportModal } from '@/components/ui/token-import-modal';
-import { Loader2, GraduationCap, Timer, ArrowRight, Gift, Wallet, Clock, HelpCircle } from 'lucide-react';
+import { Loader2, GraduationCap, Timer, ArrowRight, Gift, Wallet, Clock, HelpCircle, X } from 'lucide-react';
 import { useWeb3Modal } from '@web3modal/wagmi/react';
 import { PILOX_ABI, PILOX_ADDRESS } from "@/app/contracts/contract";
 import { useWriteContract } from 'wagmi';
@@ -190,6 +190,13 @@ export default function ClaimPage() {
       <div className="min-h-screen bg-gradient-to-b from-background via-background/95 to-background/90 flex items-center justify-center p-4">
         <div className="relative">
           <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full" />
+          <button
+            type="button"
+            onClick={() => router.push('/')}
+            className="absolute -top-2 -right-2 z-10 h-8 w-8 rounded-full bg-card/95 backdrop-blur-sm border border-border/50 hover:bg-primary/10 flex items-center justify-center transition-colors"
+          >
+            <X className="h-4 w-4" />
+          </button>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -289,11 +296,22 @@ export default function ClaimPage() {
                       />
                     </div>
                   </div>
-                  <div className="flex items-center justify-between p-4 bg-background/50 rounded-lg">
-                    <span className="text-muted-foreground">$EDU Balance</span>
-                    <span className="text-lg font-medium">
-                      {parseFloat(nativeBalance?.formatted || '0').toFixed(4)} $EDU
-                    </span>
+                                    <div className="space-y-2">
+                    <div className="flex items-center justify-between p-4 bg-background/50 rounded-lg">
+                      <span className="text-muted-foreground">$EDU Balance</span>
+                      <span className="text-lg font-medium">
+                        {parseFloat(nativeBalance?.formatted || '0').toFixed(4)} $EDU
+                      </span>
+                    </div>
+                    <a 
+                      href="https://educhain-community-faucet.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors p-2"
+                    >
+                      <span>Need $EDU tokens?</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </a>
                   </div>
                 </div>
               </CardContent>
