@@ -48,7 +48,7 @@ createWeb3Modal({
   ],
   tokens: {
     [eduChainTestnet.id]: {
-      address: '0x0000000000000000000000000000000000000000' // Native token
+      address: '0x0000000000000000000000000000000000000000'
     }
   },
   includeWalletIds: [
