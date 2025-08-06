@@ -44,4 +44,6 @@ export const API_ROUTES = {
   SUBMIT_FEEDBACK: "/feedback/submit",
   FEEDBACK_HISTORY: "/feedback/history",
   FEEDBACK_DATA: "/feedback/data",
+  SET_WALLET_ADDRESS: "/user/set-wallet-address",
+  SWAP_TOKEN: "/user/swap-token",
 } as const;
