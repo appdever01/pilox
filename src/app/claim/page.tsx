@@ -24,6 +24,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { eduChainTestnet } from '@wagmi/core/chains';
+import { WalletConfirmationModal } from '@/components/ui/wallet-confirmation-modal';
 
 export default function ClaimPage() {
   const router = useRouter();
@@ -38,6 +39,7 @@ export default function ClaimPage() {
   const { writeContractAsync: claimTokens } = useWriteContract();
   const [canClaim, setCanClaim] = useState(false);
   const [mintTime, setMintTime] = useState<number>(0);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
 
   const { data: claimStatus, refetch: refetchClaimStatus, isSuccess: isClaimStatusSuccess }: {
@@ -217,7 +219,7 @@ export default function ClaimPage() {
                 Connect your wallet to start claiming $PILOX tokens and join the educational revolution on EDUChain Network.
               </p>
               <Button
-                onClick={() => open()}
+                onClick={() => setShowConfirmation(true)}
                 className="w-full mt-6 bg-gradient-to-r from-primary via-primary/80 to-primary/50 hover:opacity-90 py-6 text-lg flex items-center justify-center gap-2"
               >
                 <Wallet className="w-5 h-5" />
@@ -226,6 +228,14 @@ export default function ClaimPage() {
             </div>
           </motion.div>
         </div>
+        <WalletConfirmationModal
+          isOpen={showConfirmation}
+          onClose={() => setShowConfirmation(false)}
+          onConfirm={() => {
+            setShowConfirmation(false);
+            open();
+          }}
+        />
       </div>
     );
   }
@@ -438,6 +448,7 @@ export default function ClaimPage() {
         isOpen={showTokenImport}
         onClose={() => setShowTokenImport(false)}
       />
+
     </div>
   );
 }
