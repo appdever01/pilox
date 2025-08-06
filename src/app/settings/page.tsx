@@ -3,12 +3,13 @@
 import { toast } from "sonner";
 import { useState } from "react";
 import { auth } from "@/lib/auth";
+import { User } from "@/types/auth";
 import { API_ROUTES } from "@/lib/config";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import AuthApiClient from "@/lib/auth-api-client";
 import PrivateRoute from "@/components/PrivateRoute";
-import { Eye, EyeOff, Loader2, Copy, Check, CheckCircle, MessageSquarePlus } from "lucide-react";
+import { Eye, EyeOff, Loader2, Copy, Check, CheckCircle, MessageSquarePlus, Wallet } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -23,6 +24,7 @@ interface UpdateDetailsResponse {
   data: {
     user: {
       name: string;
+      walletAddress: string;
       currency: {
         name: string;
         code: string;
@@ -188,6 +190,58 @@ export default function SettingsPage() {
                 )}
               </Button>
             </form>
+          </div>
+
+          {/* Wallet Settings */}
+          <div className="bg-white rounded-2xl shadow-sm p-6 space-y-6">
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-semibold">Connected Wallet</h2>
+              <div className="text-sm text-muted-foreground">
+                Manage your blockchain wallet
+              </div>
+            </div>
+            <div className="space-y-4">
+              {user?.walletAddress ? (
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-gray-700">
+                    Your Wallet Address
+                  </label>
+                  <div className="flex items-center gap-2">
+                    <div className="flex-1 p-4 bg-gray-50 rounded-lg font-mono text-sm break-all">
+                      {user.walletAddress}
+                    </div>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => {
+                        navigator.clipboard.writeText(user.walletAddress || "");
+                        toast.success("Wallet address copied!");
+                      }}
+                    >
+                      <Copy className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              ) : (
+                <div className="bg-primary/5 rounded-xl p-6 text-center space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Wallet className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold">No Wallet Connected</h3>
+                    <p className="text-sm text-muted-foreground max-w-sm mx-auto">
+                      Connect your wallet to start claiming $PILOX tokens and participate in the EDUChain Network.
+                    </p>
+                  </div>
+                  <Button
+                    onClick={() => router.push('/claim')}
+                    className="bg-gradient-to-r from-primary via-primary/80 to-primary/50 hover:opacity-90"
+                  >
+                    Connect Wallet
+                  </Button>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Security Settings */}
