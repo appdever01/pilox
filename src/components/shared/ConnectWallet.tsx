@@ -12,6 +12,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { PILOX_ADDRESS, PILOX_ABI } from '@/app/contracts/contract';
+import { eduChainTestnet } from '@wagmi/core/chains';
+import { useReadContract } from 'wagmi';
+import { useEffect, useState } from 'react';
+import { BigNumberish, formatUnits } from 'ethers';
 
 export function ConnectWallet() {
   const { open } = useWeb3Modal();
@@ -21,6 +26,31 @@ export function ConnectWallet() {
   const { data: balance, isLoading: isBalanceLoading } = useBalance({
     address: address,
   });
+  const [userBalance, setUserBalance] = useState(0);
+
+  const { data: tokenBalance, refetch: refetchTokenBalance, isSuccess: isTokenBalanceSuccess } = useReadContract({
+    address: PILOX_ADDRESS as `0x${string}`,
+    abi: PILOX_ABI,
+    functionName: "balanceOf",
+    args: [address],
+    chainId: eduChainTestnet.id,
+  });
+
+  const formatBigNumber = (value: BigNumberish, decimals: number): number => {
+    const formatted = formatUnits(value, decimals);
+    return parseFloat(formatted)
+  };
+
+  useEffect(() => {
+    if (isTokenBalanceSuccess && tokenBalance) {
+      const formattedBalance = formatBigNumber(tokenBalance as BigNumberish, 18);
+      if (formattedBalance) setUserBalance(Number(formattedBalance));
+    }
+  }, [isTokenBalanceSuccess, tokenBalance]);
+
+  useEffect(() => {
+    refetchTokenBalance();
+  }, [isConnected, address]);
 
   const handleClaimClick = () => {
     router.push('/claim');
@@ -63,7 +93,7 @@ export function ConnectWallet() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">$PILOX</span>
-                  <span className="text-xs font-medium">1,000.00</span>
+                  <span className="text-xs font-medium">{userBalance.toLocaleString()}</span>
                 </div>
               </>
             )}
@@ -74,13 +104,6 @@ export function ConnectWallet() {
             className="cursor-pointer text-sm font-medium"
           >
             Claim $PILOX
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            onClick={() => router.push('/claim-history')}
-            className="cursor-pointer text-sm"
-          >
-            <Clock className="h-4 w-4 mr-2" />
-            Claim History
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={copyAddress}
