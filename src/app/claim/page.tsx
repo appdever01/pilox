@@ -7,7 +7,8 @@ import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Confetti } from '@/components/ui/confetti';
 import { SuccessModal } from '@/components/ui/success-modal';
-import { Loader2, GraduationCap, Timer, ArrowRight, Gift, Wallet, Clock } from 'lucide-react';
+import { TokenImportModal } from '@/components/ui/token-import-modal';
+import { Loader2, GraduationCap, Timer, ArrowRight, Gift, Wallet, Clock, HelpCircle } from 'lucide-react';
 import { useWeb3Modal } from '@web3modal/wagmi/react';
 import {
   Card,
@@ -26,6 +27,7 @@ export default function ClaimPage() {
   const [userBalance, setUserBalance] = useState(22000);
   const [isClaiming, setIsClaiming] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showTokenImport, setShowTokenImport] = useState(false);
 
   const { open } = useWeb3Modal();
 
@@ -169,7 +171,18 @@ export default function ClaimPage() {
                   <Gift className="w-5 h-5 text-primary" />
                   Your Rewards
                 </CardTitle>
-              <CardDescription>Track your educational assets</CardDescription>
+              <CardDescription className="flex items-center justify-between">
+                <span>Track your educational assets</span>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-7 px-3 text-xs bg-primary/5 hover:bg-primary/10 text-primary hover:text-primary transition-colors"
+                  onClick={() => setShowTokenImport(true)}
+                >
+                  <HelpCircle className="w-3 h-3 mr-1.5" />
+                  Not seeing tokens?
+                </Button>
+              </CardDescription>
             </CardHeader>
             <CardContent>
                 <div className="space-y-6">
@@ -313,6 +326,10 @@ export default function ClaimPage() {
         isOpen={showSuccess}
         onClose={() => setShowSuccess(false)}
         amount={1000}
+      />
+      <TokenImportModal
+        isOpen={showTokenImport}
+        onClose={() => setShowTokenImport(false)}
       />
     </div>
   );
