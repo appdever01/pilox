@@ -17,6 +17,7 @@ import { eduChainTestnet } from '@wagmi/core/chains';
 import { useReadContract } from 'wagmi';
 import { useEffect, useState } from 'react';
 import { BigNumberish, formatUnits } from 'ethers';
+import { WalletConfirmationModal } from '@/components/ui/wallet-confirmation-modal';
 
 export function ConnectWallet() {
   const { open } = useWeb3Modal();
@@ -27,6 +28,7 @@ export function ConnectWallet() {
     address: address,
   });
   const [userBalance, setUserBalance] = useState(0);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const { data: tokenBalance, refetch: refetchTokenBalance, isSuccess: isTokenBalanceSuccess } = useReadContract({
     address: PILOX_ADDRESS as `0x${string}`,
@@ -126,13 +128,24 @@ export function ConnectWallet() {
   }
 
   return (
-    <Button
-      onClick={() => open()}
-      className="ml-4 bg-primary hover:bg-primary/90 text-white font-medium flex items-center gap-2 transition-all duration-200"
-    >
-      <Wallet className="w-4 h-4" />
-      <span className="hidden sm:inline">Connect Wallet</span>
-      <span className="sm:hidden">Connect</span>
-    </Button>
+    <>
+      <Button
+        onClick={() => setShowConfirmation(true)}
+        className="ml-4 bg-primary hover:bg-primary/90 text-white font-medium flex items-center gap-2 transition-all duration-200"
+      >
+        <Wallet className="w-4 h-4" />
+        <span className="hidden sm:inline">Connect Wallet</span>
+        <span className="sm:hidden">Connect</span>
+      </Button>
+
+      <WalletConfirmationModal
+        isOpen={showConfirmation}
+        onClose={() => setShowConfirmation(false)}
+        onConfirm={() => {
+          setShowConfirmation(false);
+          open();
+        }}
+      />
+    </>
   );
 }
