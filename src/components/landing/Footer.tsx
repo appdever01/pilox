@@ -75,8 +75,8 @@ export function Footer() {
             </div>
 
             <p className="text-gray-500 max-w-md mb-8">
-              Transform your documents with AI-powered intelligence. PILOX
-              delivers advanced PDF tools for seamless document management.
+              Build blockchain‑native learning with AI. PILOX brings advanced PDF tools,
+              optional IPFS storage, and verifiable credentials for courses and hackathons.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -104,7 +104,7 @@ export function Footer() {
             <form onSubmit={handleSubscribe} className="space-y-4">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Enter your email for AI + blockchain updates"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-6 py-4 rounded-full bg-[#111111] border-none text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600/50"

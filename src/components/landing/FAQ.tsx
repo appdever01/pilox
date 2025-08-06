@@ -8,39 +8,39 @@ export function FAQ() {
 
   const faqs = [
     {
-      question: "What tools does PILOX offer?",
+      question: "What blockchain + AI tools does PILOX offer?",
       answer:
-        "PILOX offers a comprehensive suite of tools including Smart PDF Viewer, PDF Chat, PDF ↔ Images conversion, AI PDF Generator, Document Converter, and YouTube Chat. Each tool is designed to enhance your document interaction experience.",
+        "PILOX offers Smart PDF Viewer, AI PDF Chat, PDF ↔ Images, AI PDF Generator, and Document Converter, now extended for blockchain edtech: optional IPFS pinning, on‑chain integrity hashes, verifiable credentials for learning milestones, and token‑gated content flows.",
     },
     {
-      question: "How does the credit system work?",
+      question: "How does the credit system work with web3 options?",
       answer:
-        "New users receive 15 free credits upon signup. Premium features require credits: AI PDF Generation (2 credits), PDF Analysis (2 credits), PDF Quiz Generation (2 credits), PDF Video Explanations (3 credits), and YouTube Video Analysis (3 credits). You can purchase additional credits anytime as needed.",
+        "New users receive 15 free credits upon signup. Premium features use credits: AI PDF Generation (2), PDF Analysis (2), Quiz Generation (2), Video Explanations (3), YouTube Analysis (3). For hackathons, you can issue optional on‑chain proofs for completed tasks without requiring crypto wallets for basic usage.",
     },
     {
-      question: "What types of documents can I convert?",
+      question: "What types of documents can I convert and anchor on‑chain?",
       answer:
-        "Our Document Converter supports multiple formats. You can convert PDFs to images, combine images into PDFs, and process various document formats seamlessly. We handle text-based PDFs, scanned documents, and image-only PDFs.",
+        "Convert PDFs to images and back, merge, and rearrange. For integrity, you can create a content hash that can be written on‑chain while the file itself stays private or stored on IPFS according to your policy.",
     },
     {
-      question: "Is my data secure?",
+      question: "Is my data secure and how does blockchain help?",
       answer:
-        "Yes, we prioritize security with enterprise-grade measures. We use encryption for uploads and don't store documents permanently for non-signed-in users. Your documents and privacy are protected throughout the process.",
+        "Yes. We use enterprise‑grade security and do not permanently store documents for non‑signed‑in users. Blockchain features are opt‑in: we record only minimal hashes/claims for verifiability. Sensitive files can remain off‑chain with encryption.",
     },
     {
-      question: "How does the YouTube Chat feature work?",
+      question: "How does YouTube Chat support blockchain learning?",
       answer:
-        "YouTube Chat allows you to interact with video content using AI. You can analyze videos (3 credits), get detailed explanations of complex topics, and understand key concepts covered in the videos. The analysis includes summaries, key points, and interactive Q&A.",
+        "Analyze videos (3 credits), get key insights, and generate quizzes. Earn verifiable credentials or badges for completed modules that can be checked on‑chain by judges or institutions.",
     },
     {
       question: "What's included in the free plan?",
       answer:
-        "The free plan includes Smart PDF Viewer, basic PDF to Images conversion, Images to PDF conversion, Document Format Conversion, 15 free credits for new users, and basic support. You can upgrade anytime to access premium features.",
+        "Free includes Smart PDF Viewer, basic PDF ↔ Images, Document Conversion, 15 free credits, and basic support. Web3 features are optional and can be demonstrated in hackathons without requiring payments or wallets.",
     },
     {
-      question: "Do you offer enterprise solutions?",
+      question: "Do you offer enterprise or academic credentials solutions?",
       answer:
-        "Yes, we provide customized enterprise solutions with unlimited access, priority support, and additional security features. Contact our sales team for tailored pricing and solutions for your organization.",
+        "Yes. We support institution‑level verifiable credentials (VCs), DID methods, audit logs with on‑chain anchors, private storage, and custom governance for course completion proofs.",
     },
   ];
 
@@ -55,7 +55,7 @@ export function FAQ() {
 
           <h2 className="text-4xl md:text-5xl font-bold">
             Frequently Asked
-            <span className="block text-blue-500">Questions</span>
+            <span className="block text-blue-500">Blockchain Questions</span>
           </h2>
         </div>
 

@@ -22,17 +22,17 @@ export function WhyChooseUs() {
   const features = [
     {
       icon: Shield,
-      title: "Enterprise-Grade Security",
+      title: "Enterprise & Web3 Security",
       description:
-        "Your documents are protected with top-tier security. No permanent storage for non-signed-in users and enterprise-level data protection.",
+        "Protect documents with enterprise controls. Optionally add on‑chain integrity hashes, DID/VC credentials, and IPFS pinning for verifiable learning.",
       iconBg: "bg-blue-50",
       iconColor: "text-blue-500",
     },
     {
       icon: Sparkles,
-      title: "AI-Powered Intelligence",
+      title: "AI‑Powered Intelligence",
       description:
-        "Experience next-gen document analysis with our advanced AI. From complex layouts to scanned documents, we handle it all effortlessly.",
+        "Next‑gen analysis for study materials. Generate quizzes, summaries, and video explanations—issue verifiable completion badges if needed.",
       iconBg: "bg-blue-50",
       iconColor: "text-blue-500",
     },
@@ -40,7 +40,7 @@ export function WhyChooseUs() {
       icon: FileText,
       title: "Comprehensive Tools",
       description:
-        "Access a complete suite of document tools - from smart PDF viewing to format conversion, all designed for maximum efficiency.",
+        "From smart PDF viewing to conversions, all optimized for blockchain edutech pilots—keep UX simple while enabling verifiability.",
       iconBg: "bg-purple-50",
       iconColor: "text-purple-500",
     },
@@ -48,7 +48,7 @@ export function WhyChooseUs() {
       icon: Zap,
       title: "Pay As You Grow",
       description:
-        "Start with powerful free features and scale with our flexible credit-based system. Get 2 free credits daily to try premium features.",
+        "Start free and scale with credits. Web3 is optional—demonstrate on‑chain flows in hackathons without forcing wallets on learners.",
       iconBg: "bg-amber-50",
       iconColor: "text-amber-500",
     },
@@ -77,8 +77,8 @@ export function WhyChooseUs() {
             </h2>
 
             <p className="text-gray-600 text-lg mb-12">
-              Join thousands of satisfied users who trust PILOX for their document processing needs. 
-              Enterprise security meets AI innovation.
+              Join thousands using PILOX for AI‑assisted study and blockchain‑ready credentials. 
+              Enterprise security meets AI and verifiable learning.
             </p>
 
             <div className="grid gap-8">

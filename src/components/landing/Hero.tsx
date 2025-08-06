@@ -50,28 +50,28 @@ export function Hero() {
         <div className="text-center max-w-4xl mx-auto">
           <p className="text-blue-600/90 text-sm font-medium mb-1 flex items-center justify-center gap-1.5 bg-blue-50/50 w-fit mx-auto px-3 py-1.5 rounded-full border border-blue-100">
             <Sparkles className="w-3.5 h-3.5" />
-            AI-powered PDF magic ✨
+            AI + Blockchain for Learning ✨
           </p>
 
           <div className="mb-1">
             <div className="min-h-[150px] md:min-h-[180px] flex items-center justify-center">
               <TypeAnimation
                 sequence={[
-                  "Turn Your Photos into PDFs",
+                  "Chat with PDFs using AI",
                   1000,
-                  "Convert PDFs to Images",
+                  "On-chain Proof of Learning",
                   1000,
-                  "Switch Document Formats",
+                  "Token‑gated Course Materials",
                   1000,
-                  "Organize PDF Pages",
+                  "Convert PDFs ↔ Images",
                   1000,
-                  "Create Study Materials",
+                  "Verifiable Credentials (VCs)",
                   1000,
-                  "Make PDFs Work for You",
+                  "IPFS‑backed Storage Options",
                   1000,
-                  "Transform with AI Magic",
+                  "Create Web3‑ready Study PDFs",
                   1000,
-                  "Your PDF Assistant",
+                  "Your Web3 PDF Co‑pilot",
                   1000,
                 ]}
                 wrapper="h1"
@@ -83,22 +83,19 @@ export function Hero() {
           </div>
 
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 md:mb-12">
-            Transform your PDF experience with AI-powered intelligence. Upload,
-            analyze, and interact with your documents like never before.
+            Build blockchain‑native learning experiences. Upload, analyze, and chat
+            with documents using AI, issue verifiable credentials, and optionally
+            anchor integrity proofs on‑chain.
           </p>
 
           <div className="flex flex-row items-center justify-center gap-2 mb-16">
             <div className="flex items-center gap-2 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200">
               <Users2 className="w-4 h-4  text-blue-600" />
-              <span className="text-sm sm:text-sm text-gray-600">
-                10k+ users
-              </span>
+              <span className="text-sm sm:text-sm text-gray-600">10k+ learners</span>
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200">
               <Shield className="w-4 h-4  text-blue-600" />
-              <span className="text-sm sm:text-sm text-gray-600">
-                Enterprise security
-              </span>
+              <span className="text-sm sm:text-sm text-gray-600">Web3‑grade security</span>
             </div>
           </div>
 

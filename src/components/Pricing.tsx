@@ -40,7 +40,8 @@ const features = {
     "Document Format Conversion",
     "15 Free Credits for New Users",
     "Basic Support",
-    "Latex Renderer",
+    "LaTeX Renderer",
+    "Optional IPFS Pinning (demo)",
   ],
   premium: [
     "All Free Features",
@@ -50,6 +51,8 @@ const features = {
     "PDF Video Explanations (3 credits)",
     "YouTube Video Analysis (3 credits)",
     "Priority Support",
+    "On‑chain Integrity Hashes (demo)",
+    "Verifiable Credentials for Modules",
   ],
 };
 
@@ -155,7 +158,7 @@ export function Pricing() {
             Pay As You Grow
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Start with free credits and upgrade when you need more
+            Start free. Add optional blockchain verifiability as your use case evolves
           </p>
           <div className="flex items-center justify-center gap-4 mt-4">
             <Select value={currencyCode} onValueChange={setCurrency}>
@@ -180,7 +183,7 @@ export function Pricing() {
             <div className="flex-grow">
               <h3 className="text-2xl font-semibold mb-2">Free Features</h3>
               <p className="text-muted-foreground mb-6">
-                Essential tools for everyone
+                Essential tools for everyone; ideal for hackathon demos
               </p>
 
               <div className="bg-blue-50/80 rounded-2xl p-4 mb-8">
@@ -252,11 +255,9 @@ export function Pricing() {
             </div>
 
             <div className="flex-grow">
-              <h3 className="text-2xl font-semibold mb-2">
-                Credit-Based Features
-              </h3>
+              <h3 className="text-2xl font-semibold mb-2">Credit‑Based Features</h3>
               <p className="text-muted-foreground mb-6">
-                Pay per use with credits
+                Pay per use with credits; unlock verifiable credentials and on‑chain proofs
               </p>
 
               <div className="bg-blue-50/80 rounded-2xl p-4 mb-8">

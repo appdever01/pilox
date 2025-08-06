@@ -14,15 +14,15 @@ const testimonials = [
   {
     id: 1,
     content:
-      "PILOX has revolutionized how I study. The quiz generation feature helps me prepare for exams effectively, and the AI chat makes understanding complex documents so much easier.",
+      "PILOX helped our hackathon team issue verifiable credentials for module completion. The AI quizzes plus on‑chain proofs made our submission stand out.",
     author: "Sarah J.",
-    role: "Graduate Student",
+    role: "Hackathon Participant",
     rating: 5,
   },
   {
     id: 2,
     content:
-      "As a teacher, this tool is invaluable. I can quickly create quizzes from textbook content and provide better learning materials for my students. The video explanations are a game-changer.",
+      "As a teacher, I create AI‑generated quizzes and award token‑gated badges. Students love the transparency of verifiable achievements.",
     author: "Dr. Michael C.",
     role: "University Professor",
     rating: 5,
@@ -30,7 +30,7 @@ const testimonials = [
   {
     id: 3,
     content:
-      "The document analysis capabilities are outstanding. Being able to process large PDFs and get instant insights has saved me countless hours of work.",
+      "Great for research: I can hash important PDFs, pin to IPFS when needed, and still keep sensitive data private. The AI summaries are top‑tier.",
     author: "Emma T.",
     role: "Research Analyst",
     rating: 5,
@@ -38,7 +38,7 @@ const testimonials = [
   {
     id: 4,
     content:
-      "I love how I can analyze documents on the go. The mobile experience is seamless, and the pay-as-you-go option fits my needs perfectly.",
+      "Mobile‑first experience with optional web3 features. Pay‑as‑you‑go credits kept it simple for my team while still demonstrating on‑chain flows.",
     author: "David W.",
     role: "Business Consultant",
     rating: 5,
@@ -88,10 +88,10 @@ export function Testimonials() {
             <span>What People Say</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            What Our Users Say
+            Loved by Learners, Educators, and Hackathon Teams
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover how PILOX is helping professionals and teams work smarter
+            Discover how PILOX powers AI study workflows and verifiable, blockchain‑ready credentials
           </p>
         </div>
 

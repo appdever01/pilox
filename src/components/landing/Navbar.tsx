@@ -56,7 +56,7 @@ export function Navbar() {
         { name: "Images to PDF", href: "/images-to-pdf", icon: ImageIcon },
         { name: "Rearrange PDF", href: "/rearrange-pdf", icon: FileStack },
         {
-          name: "Chat with PDF",
+          name: "Chat with PDF (AI)",
           href: "/login",
           icon: MessageSquare,
           isPro: true,

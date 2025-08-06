@@ -17,9 +17,9 @@ import { Button } from "@/components/ui/button";
 const tools = [
   {
     icon: Bot,
-    title: "PDF Chat",
+    title: "PDF Chat (AI)",
     description:
-      "Interact with your documents through AI chat, generate explanatory videos, and create comprehensive quizzes for better understanding.",
+      "Chat with your documents using AI. Generate quizzes and video explanations. Optionally attach on‑chain proofs of comprehension for hackathon showcases.",
     color: "text-cyan-500",
     bgColor: "bg-cyan-50",
     route: "/chat",
@@ -28,7 +28,7 @@ const tools = [
     icon: Image,
     title: "PDF ↔ Images",
     description:
-      "Seamlessly convert your PDFs to high-quality images and combine multiple images into professional-looking PDF documents.",
+      "Convert PDFs to images and back. Pin assets to IPFS or keep them local—your choice based on compliance needs.",
     color: "text-purple-500",
     bgColor: "bg-purple-50",
     route: "/pdf-to-images",
@@ -37,7 +37,7 @@ const tools = [
     icon: FileOutput,
     title: "AI PDF Generator",
     description:
-      "Transform your ideas into professionally formatted PDFs using advanced AI technology. Create documents from simple text prompts.",
+      "Turn prompts into beautifully formatted PDFs. Stamp timeproof hashes for tamper‑evident study records.",
     color: "text-blue-500",
     bgColor: "bg-blue-50",
     route: "/generate-pdf",
@@ -46,7 +46,7 @@ const tools = [
     icon: Files,
     title: "Document Converter",
     description:
-      "Convert your documents between multiple formats with perfect formatting retention. Support for all major document types.",
+      "Convert across formats with high fidelity. Produce web3‑ready exports and optional NFT‑certificate bundles for achievements.",
     color: "text-orange-500",
     bgColor: "bg-orange-50",
     route: "/convert-documents",
@@ -55,7 +55,7 @@ const tools = [
     icon: FileText,
     title: "LaTeX Renderer",
     description:
-      "Advanced LaTeX renderer with real-time preview, mathematical equation support, and document formatting - all accessible for free.",
+      "Advanced LaTeX with real‑time preview. Ideal for cryptography notes, zero‑knowledge math, and reproducible research PDFs.",
     color: "text-blue-500",
     bgColor: "bg-blue-50",
     route: "/latex-renderer",
@@ -65,7 +65,7 @@ const tools = [
     icon: Youtube,
     title: "YouTube Chat",
     description:
-      "Engage with video content through AI chat, generate custom quizzes, and get detailed explanations of complex topics.",
+      "Engage with videos through AI chat. Earn token‑gated badges by completing on‑chain verified quizzes from content.",
     color: "text-red-500",
     bgColor: "bg-red-50",
     route: "/youtube-chat",
@@ -84,13 +84,13 @@ export function Features() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-50 to-purple-100 text-purple-800 text-sm font-medium mb-8">
             <Sparkles className="w-4 h-4" />
-            <span>Powerful Features</span>
+            <span>Powerful Web3‑Ready Features</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Powerful Tools & Features
+            Tools for Blockchain‑Native Learning
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience our comprehensive suite of AI-powered document tools
+            Experience AI document tooling with optional IPFS storage, on‑chain proofs, and token‑gated achievements
           </p>
         </div>
 
