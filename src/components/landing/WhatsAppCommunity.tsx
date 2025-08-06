@@ -76,7 +76,7 @@ export function WhatsAppCommunity() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
-                    pilox.com 📃💬🩷
+                    pilox.com.ng 📃💬🩷
                   </h3>
                   <p className="text-sm text-gray-500">1,234 members</p>
                 </div>

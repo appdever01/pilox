@@ -84,7 +84,7 @@ export default function ClaimPage() {
     if (isClaimHistorySuccess && claimHistory) {
       const [amount, nextClaimTime] = claimHistory;
       setTotalClaimed(Number(formatUnits(amount, 18)));
-      
+
       if (nextClaimTime > BigInt(0)) {
         const now = BigInt(Math.floor(Date.now() / 1000));
         if (nextClaimTime > now) {
@@ -179,6 +179,7 @@ export default function ClaimPage() {
       toast.success("Claim Successful!");
       handleClaimStatus();
       refetchTokenBalance();
+      refetchClaimHistory();
       setShowSuccess(true);
       setIsClaiming(false);
     } catch (error) {
@@ -306,14 +307,14 @@ export default function ClaimPage() {
                       />
                     </div>
                   </div>
-                                    <div className="space-y-2">
+                  <div className="space-y-2">
                     <div className="flex items-center justify-between p-4 bg-background/50 rounded-lg">
                       <span className="text-muted-foreground">$EDU Balance</span>
                       <span className="text-lg font-medium">
                         {parseFloat(nativeBalance?.formatted || '0').toFixed(4)} $EDU
                       </span>
                     </div>
-                    <a 
+                    <a
                       href="https://educhain-community-faucet.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"

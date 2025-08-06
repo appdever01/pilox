@@ -163,7 +163,7 @@ Join me on this AI-powered learning journey! Use my referral code "${referralCod
     try {
       if (navigator.share) {
         await navigator.share({
-          title: "Join me on pilox.com",
+          title: "Join me on pilox.com.ng",
           text: referralMessage,
           url: referralLink,
         });
