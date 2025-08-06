@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Metadata, Viewport } from "next";
-import { Toaster } from "sonner";
+
 import NextTopLoader from "nextjs-toploader";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Instrument_Sans } from "next/font/google";
@@ -155,9 +155,6 @@ export default function RootLayout({
         <PWAInstallPrompt />
 
         <GoogleAnalytics />
-
-
-        <Toaster richColors position="top-center" />
       </body>
     </html>
   );

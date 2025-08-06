@@ -23,7 +23,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { toast } from "sonner";
+import { toast } from "react-toastify";
 import { auth } from "@/lib/auth";
 import { useState } from "react";
 import { motion } from "framer-motion";

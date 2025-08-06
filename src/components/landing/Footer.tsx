@@ -9,7 +9,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
-import { toast } from "sonner";
+import { toast } from "react-toastify";
 import { useState } from "react";
 import { API_BASE_URL, API_ROUTES } from "@/lib/config";
 

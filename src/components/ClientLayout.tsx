@@ -8,6 +8,8 @@ import { UserNavbar } from "./dashboard/UserNavbar";
 import { useEffect, useState } from "react";
 import NextTopLoader from "nextjs-toploader";
 import { usePathname, useRouter } from "next/navigation";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Initialize auth state before first render
 const initialToken = typeof window !== "undefined" ? auth.getToken() : null;
@@ -89,6 +91,18 @@ export default function ClientLayout({
         {children}
       </main>
       {!isAuthPage && !noFooterPages && <Footer />}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   );
 }

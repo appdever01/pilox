@@ -1,12 +1,12 @@
-import { toast } from "sonner";
+import { toast } from "react-toastify";
 
 export async function convertDocument(
   file: File,
   sourceFormat: string,
   targetFormat: string
 ): Promise<{ blob: Blob; filename: string }> {
-  const toastId = toast.loading("Converting your document...", {
-    duration: 10000,
+  const toastId = toast.info("Converting your document...", {
+    autoClose: false,
     position: "top-right",
   });
 
@@ -41,7 +41,7 @@ export async function convertDocument(
 
     toast.dismiss(toastId);
     toast.success("✨ Document converted successfully!", {
-      duration: 3000,
+      autoClose: 3000,
       position: "top-right",
     });
 
@@ -53,7 +53,7 @@ export async function convertDocument(
     console.error("Conversion error:", error);
     toast.dismiss(toastId);
     toast.error("Failed to convert document", {
-      duration: 5000,
+      autoClose: 5000,
       position: "top-right",
     });
     throw error;

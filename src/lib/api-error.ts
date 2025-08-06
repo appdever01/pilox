@@ -1,5 +1,5 @@
 import { auth } from "./auth";
-import { toast } from "sonner";
+import { toast } from "react-toastify";
 
 export interface ApiError {
   code?: string;

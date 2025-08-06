@@ -34,35 +34,7 @@ export function Loader() {
             />
           </motion.div>
 
-          <div className="space-y-3">
-            <motion.div
-              className="h-1 w-36 bg-gray-100 rounded-full overflow-hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              <motion.div
-                className="h-full w-full bg-gradient-to-r from-primary/40 via-primary to-primary/40"
-                animate={{
-                  x: ["-100%", "100%"],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-              />
-            </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-sm text-muted-foreground font-medium tracking-wide hidden"
-            >
-              Loading...
-            </motion.p>
-          </div>
+      
         </motion.div>
       </div>
 

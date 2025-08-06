@@ -16,7 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { toast } from "sonner";
+import { toast } from "react-toastify";
 import { auth } from "@/lib/auth";
 import { API_ROUTES } from "@/lib/config";
 import { useRouter } from "next/navigation";

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { toast } from "sonner";
+import { toast } from "react-toastify";
 import { auth } from "@/lib/auth";
 import { Loader2 } from "lucide-react";
 import ApiClient from "@/lib/api-client";
